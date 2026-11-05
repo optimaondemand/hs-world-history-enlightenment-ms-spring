@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -300,6 +325,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The man who worked out the details was Count Alfred von Schlieffen, chief of the German <span class="gloss" tabindex="0"><strong>general staff</strong><button class="gloss-audio" onclick="speakGloss(event,'JEN-er-ul STAF')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">JEN-er-ul STAF</span>The group of senior officers who plan a nation&rsquo;s wars. <a class="om-maplink" href="#gloss-general-staff">See the glossary box.</a></span></span> from 1891 to 1906. In a memorandum written in 1905, he proposed a great sweep. A small force would hold the east. The main army would go west. France&rsquo;s border was lined with strong forts, so Schlieffen did not want to attack it head-on. Instead, the German right wing would march through Belgium, curve west of Paris, and trap the French army against its own frontier.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Look at what this plan required. It required crossing a country that had promised to stay out of wars. In 1839 the great powers, including Britain and Prussia, had agreed to respect Belgian <span class="gloss" tabindex="0"><strong>neutrality</strong><button class="gloss-audio" onclick="speakGloss(event,'noo-TRAL-uh-tee')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">noo-TRAL-uh-tee</span>Staying out of a war and not taking sides. A neutral country expects the fighting armies to stay off its land. <a class="om-maplink" href="#gloss-neutrality">See the glossary box.</a></span></span>. The plan also required perfect timing. Every day lost in Belgium was a day Russia could use. There was no room for error.</p>
     </div>
+<div class="optima-widget ow-select" id="w19-1-a">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Test the plan against what you just read.</div>
+        <div class="widget-row" data-correct="2" data-hint="Ask what the plan assumed about Russia.">
+            <div class="widget-row-prompt">Suppose Russia had been able to mobilize as quickly as France. What would that have done to the German plan?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Look again. The plan sent the main army west because Russia was slow. A quick Russia would have removed that advantage.">Made it easier, because Germany could have ignored the east</button><button data-choice="1" data-fb="The plan depended on it completely. Germany meant to beat France first and turn east before Russia was ready.">Changed nothing, because the plan never depended on Russia</button><button data-choice="2" data-fb="Right. The whole plan rested on Russia being slow. Each week Russia saved was a week taken from Germany.">Cut the time Germany had to beat France, so an already tight timetable would have been tighter</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Think about what a plan with no room for error cannot afford.">
+            <div class="widget-row-prompt">Why did the ten days that the Belgian forts at Liege held out matter so much to Germany?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. The plan had no room for error. Ten days was a long time on a tight timetable, and the columns were already behind schedule.">On a plan built on speed, lost days could not be won back, and Russia was mobilizing meanwhile</button><button data-choice="1" data-fb="No. The forts held about ten days before the siege guns broke them. The damage was to the timetable, not to the army.">The forts destroyed most of the German army</button><button data-choice="2" data-fb="Britain declared war on the night German troops crossed into Belgium. Time at Liege is not what brought Britain in.">It gave Britain time to decide whether to enter the war</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE PLAN CHANGES HANDS</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Schlieffen retired in 1906. His successor was Helmuth von Moltke, called Moltke the Younger because his famous uncle had led Prussia&rsquo;s armies to victory in the 1860s and 1870s. <span class="gloss" tabindex="0"><strong>Moltke</strong><button class="gloss-audio" onclick="speakGloss(event,'HEL-moot fon MOLT-kuh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">HEL-moot fon MOLT-kuh</span>Helmuth von Moltke the Younger was the German chief of staff who put the Schlieffen Plan into action and lost control of it at the Marne. <a class="om-maplink" href="#fig-19-1-moltke">Read more below.</a></span></span> changed the plan. He strengthened the German left wing, which faced France&rsquo;s border in Alsace and Lorraine. He also kept the army out of the Netherlands, so the right wing would have to squeeze through Belgium alone. Later, many officers argued that these changes left the right wing too weak. Others replied that Moltke had little choice, since the French might attack in the south.</p>
@@ -344,6 +381,75 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">A famous story tells how about 600 Paris taxis carried some 6,000 soldiers to the front. The number was small, but the taxis became a symbol of a nation fighting for its life.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">The battle ended Germany&rsquo;s hope of a quick victory in the west. Each side lost hundreds of thousands of men killed, wounded, or missing. After the Marne, the war in the west became a long struggle.</p></div></div>
     </div></div>
+<div class="optima-widget" id="w19-1-seq">
+<div class="widget-kicker">PUT IT IN ORDER</div>
+<div class="widget-question">The turn at the Marne came as a chain of events. Rebuild the chain.</div>
+<div style="font-size:13px; color:#1B6A94; margin-bottom:8px; line-height:1.4;">Tap the events in the order they happened. Tap a placed event to take it back.</div>
+<div data-pool style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;"></div>
+<div style="font-size:11px; color:#1B6A94; letter-spacing:0.4px; margin-bottom:6px;">YOUR ORDER</div>
+<ol data-list style="margin:0 0 8px 0; padding-left:26px; min-height:24px;"></ol>
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w19-1-seq");
+  var events = ["Kluck turns southeast and passes east of Paris, exposing his flank.", "French pilots spot the move, and the new French army in Paris prepares to strike.", "The French army strikes the German First Army's flank.", "A gap about thirty miles wide opens between the German First and Second Armies.", "Moltke sends Hentsch to judge the danger, and the German armies begin to fall back.", "The Germans dig in north of the Aisne, and Moltke is replaced."];
+  var order = [3, 0, 5, 2, 4, 1];
+  var placed = [];
+  var pool = root.querySelector("[data-pool]");
+  var list = root.querySelector("[data-list]");
+  var out = root.querySelector("[data-out]");
+  var CHIP = "text-align:left; background:#FFFFFF; border:1.5px solid #D0D9E8; border-radius:8px; padding:9px 12px; font-size:14px; color:#0E1C42; cursor:pointer; font-family:inherit; line-height:1.45;";
+  function draw() {
+    pool.innerHTML = "";
+    list.innerHTML = "";
+    order.forEach(function (i) {
+      if (placed.indexOf(i) === -1) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.style.cssText = CHIP;
+        b.textContent = events[i];
+        b.addEventListener("click", function () { placed.push(i); draw(); });
+        pool.appendChild(b);
+      }
+    });
+    var full = placed.length === events.length;
+    var right = 0;
+    placed.forEach(function (i, pos) {
+      var li = document.createElement("li");
+      li.style.cssText = "margin-bottom:6px;";
+      var b = document.createElement("button");
+      b.type = "button";
+      b.style.cssText = CHIP + " width:100%;";
+      b.textContent = events[i];
+      if (full) {
+        if (i === pos) { right++; b.style.background = "#D8F0DD"; b.style.borderColor = "#2A9D5C"; }
+        else { b.style.background = "#FDECEC"; b.style.borderColor = "#C0392B"; }
+      }
+      b.addEventListener("click", function () { placed.splice(placed.indexOf(i), 1); draw(); });
+      li.appendChild(b);
+      list.appendChild(li);
+    });
+    if (!full) {
+      out.textContent = placed.length + " of " + events.length + " placed. Ask of each event: what had to happen before it could?";
+    } else if (right === events.length) {
+      out.textContent = "Right. Notice where the chain begins: with one general's choice on September 2. Every later step was made possible by the one before it.";
+    } else {
+      out.textContent = right + " of " + events.length + " are in the right place. " + "Look for the event that made the next one possible. What had to happen before the French could strike at all?";
+    }
+  }
+  root.querySelector(".widget-reset").addEventListener("click", function (e) { e.stopPropagation(); placed = []; draw(); });
+  draw();
+})();
+</script>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">CHANGE ONE CHOICE</div>
+        <div class="widget-question">Pick one decision and ask what might have changed if it had gone the other way. There is no single right choice.</div>
+        <div class="widget-options"><button data-response="A stronger right wing might have given Kluck the men to swing west of Paris. But officers also defended Moltke, since the French might have attacked in the south. A strong left wing was a hedge against a real danger, so you are weighing one risk against another.">Moltke keeps the right wing as strong as Schlieffen planned</button><button data-response="His flank would not have faced the army gathering in Paris on September 5. But Kluck was short of men and chasing the retreating British and French, and supply was a problem for the whole army. A different turn might have changed the day without changing the war.">Kluck swings west of Paris, as his orders said</button><button data-response="Hentsch visited the armies while the fighting was undecided, found the Second Army ready to retreat, and agreed, and the First Army fell back. Without him the fighting might have gone on. But the thirty-mile gap was still open, and Allied troops were moving into it.">Hentsch does not advise a retreat</button><button data-response="The forts at Liege held about ten days, and the columns were behind schedule from then on. With no delay Germany would have kept more of its timetable. But Belgium's refusal was a choice too, and the invasion itself brought Britain into the war.">Belgium lets the Germans through without a fight</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WHAT DECIDED IT?</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Historians still argue about the Marne. The argument matters because it asks how much a war depends on plans and how much on people.</p>
@@ -352,6 +458,29 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Notice also what the Marne shows about character. Joffre was calm and held his nerve when his own plan had failed. Moltke was a worried man who lost his grip. The old writers called the first quality self-government: the mind ruling fear instead of being ruled by it. Great plans do not carry themselves out. They depend on the courage and judgment of the men who command. Belgium offers a second example. A small country chose to resist a great one, and the ten days it cost the German timetable were part of the answer to this lesson&rsquo;s question.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">After the Marne, both sides tried to outflank each other in a race to the sea. By November a line of trenches ran from the Swiss border to the North Sea. The short war was over. The next lesson follows the soldiers into the trenches.</p>
     </div>
+<div class="optima-widget" id="w19-1-sp">
+<div class="widget-kicker">WHERE DO YOU STAND?</div>
+<div class="widget-question">Was the German plan doomed from the start, or did people spoil a sound plan? Slide to your view.</div>
+<div style="display:flex; justify-content:space-between; gap:12px; font-size:13px; color:#1B6A94; margin-bottom:6px; line-height:1.4;"><span style="max-width:46%;">The plan could never have worked</span><span style="max-width:46%; text-align:right;">The plan was sound, and people broke it</span></div>
+<input type="range" min="0" max="100" step="1" value="50" aria-label="Plan or people" style="width:100%; accent-color:#0E1C42; margin:0 0 4px 0;">
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w19-1-sp");
+  var bands = [[20, "You say the plan itself was doomed. Your best points: no army that large could be fed and armed so far from its railways, and the invasion of Belgium brought Britain into the war. A plan that needed Britain to stay out rested on hope. The hard question for you: how do you explain that the Germans came within about thirty miles of Paris?"], [40, "You lean toward a flawed plan. You can point to supply and to Belgium. But you also allow that choices on the day counted. Which one decision would you say mattered most, and why does it not cancel your view?"], [60, "You hold that plans and people both mattered. That is a reasonable position, but it needs a test. Name the single decision you think counted most, and say what would have had to be different for it to go the other way."], [80, "You lean toward a sound plan broken by men. You can point to Moltke weakening the right wing, Kluck turning southeast, and Hentsch ordering a retreat while the fighting was undecided. The hard question: what do you say to historians who point to supply?"], [100, "You say the plan was sound and men broke it. Your best points: Moltke weakened the right wing, Kluck turned the wrong way, and Hentsch ordered a retreat while the fighting was undecided, and the First Army obeyed. The hard question for you: no army could be fed so far from its railways. Why would better leaders have solved that?"]];
+  var input = root.querySelector("input");
+  var out = root.querySelector("[data-out]");
+  function show() {
+    var v = +input.value;
+    for (var i = 0; i < bands.length; i++) { if (v <= bands[i][0]) { out.textContent = bands[i][1]; return; } }
+  }
+  input.addEventListener("input", show);
+  root.querySelector(".widget-reset").addEventListener("click", function (e) { e.stopPropagation(); input.value = 50; show(); });
+  show();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">FOR YOUR DISCUSSION POST</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">This week&rsquo;s discussion asks: Could Germany have won in 1914? Choose a side. In your answer, name at least two specific decisions made between 1905 and September 1914, and explain how each one could have gone another way.</p>
@@ -392,6 +521,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

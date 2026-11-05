@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -306,6 +331,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">This mattered enormously for Russia. Much of its grain was sold abroad through the straits, and the guns and shells it needed came in the same way. With the straits closed, Russia was nearly cut off from its allies. Its other ports were far away or frozen for much of the year.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Winston Churchill, the head of the British navy, thought he saw a bold answer. A fleet could force its way through the Dardanelles, reach Constantinople, knock the Ottoman Empire out of the war, and open a sea road to Russia. It was a plan to go around the trenches.</p>
     </div>
+<div class="optima-widget ow-select" id="w20-2-a">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about the straits.</div>
+        <div class="widget-row" data-correct="2" data-hint="Think about what Russia sent out and what it needed in.">
+            <div class="widget-row-prompt">With the straits closed, Russia was nearly cut off from its allies. What would it have the hardest time doing?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Russia had millions of men. The trouble was in selling grain and bringing in guns and shells.">Raising an army</button><button data-choice="1" data-fb="Its railways were thin, but that is a separate problem from the closed straits.">Building railways</button><button data-choice="2" data-fb="Right. Its other ports were far away or frozen for much of the year.">Selling its grain abroad and bringing in the guns and shells it needed</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Where did the plan send the fleet?">
+            <div class="widget-row-prompt">Why did Churchill's plan look like a way around the trenches?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. If it had worked, it would have knocked the Ottoman Empire out of the war and relieved Russia.">A fleet could force the Dardanelles, reach Constantinople, and open a sea road to Russia without fighting through the lines</button><button data-choice="1" data-fb="Berlin was never the target. The aim was Constantinople and the straits.">It would have taken Berlin from the sea</button><button data-choice="2" data-fb="Britain was the one blockading. The straits mattered for Russia and the Ottoman Empire.">It would have ended Britain's own blockade</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">GALLIPOLI</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The fleet tried on March 18, 1915. Hidden mines sank three old battleships and crippled others, and the admiral called off the attack. Then the Allies decided to land troops on the Gallipoli peninsula, which lies along the Dardanelles, to destroy the forts from the land.</p>
@@ -319,12 +356,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">After the war the Ottoman Empire collapsed. Kemal led a Turkish army that drove out foreign forces, and in 1923 he became the first president of the Republic of Turkey. Later the Turkish parliament gave him the name Atat&uuml;rk, which means &ldquo;father of the Turks.&rdquo;</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Gallipoli made his reputation. It shows how one commander&rsquo;s quick judgment on one morning could shape a battle and, later, the history of a nation.</p></div></div>
     </div></div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">SECOND THOUGHTS</div>
+        <div class="widget-question">Historians still debate whether the navy might have succeeded if it had tried again. What do you think?</div>
+        <div class="widget-options"><button data-response="Some argue that the Ottoman guns were low on shells, so a second attack might have broken through. But the Allies had already lost the element of surprise, and the defenders had time to prepare.">It should have tried again</button><button data-response="Others say the minefields and forts made success unlikely. Hidden mines had sunk three old battleships in a single day. But stopping had a price as well: the land campaign that followed cost well over four hundred thousand men killed, wounded, or sick on both sides.">It was right to stop</button><button data-response="That is an honest answer. The lesson says what is clear: the Allies lost the element of surprise. What no one can know is how short of shells the defenders really were. A good historian says what the evidence cannot show.">I cannot tell from the evidence</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE WAR AT SEA</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Britain ruled the seas. Its navy was the largest in the world, and from the first weeks of the war it used that power to enforce a <span class="gloss" tabindex="0"><strong>blockade</strong><button class="gloss-audio" onclick="speakGloss(event,'blok-AYD')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">blok-AYD</span>Using warships to cut off an enemy&rsquo;s trade by sea. <a class="om-maplink" href="#gloss-blockade">See the glossary box.</a></span></span> of Germany. Ships heading to German ports were stopped and searched. Food, fuel, and raw materials ran short. The blockade was a form of attrition that worked slowly, by hunger, and the German people felt it most in the winter of 1916 to 1917.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The two great fleets met only once. At Jutland, in the North Sea, on May 31 and June 1, 1916, the British lost more ships and more men than the Germans did. But the German fleet returned to port and never again challenged the blockade in force. A battle that looked like a draw had decided the matter in Britain&rsquo;s favor.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The blockade also raised hard questions of law. In November 1914 Britain declared the North Sea a military area and mined it, so neutral ships had to pass through British inspection. The United States protested, but its protests were mild next to its protests against Germany. One reason was that the British blockade took cargoes and money, while the U-boats took lives.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Germany needed another answer. Its answer was the submarine.</p>
+    </div>
+<div class="optima-widget ow-select" id="w20-2-b">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about the war at sea.</div>
+        <div class="widget-row" data-correct="1" data-hint="Look at what the German fleet did next.">
+            <div class="widget-row-prompt">At Jutland the British lost more ships and more men than the Germans did. Why does the lesson say the result favored Britain?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson gives no such reason. Look at what the German fleet did afterward.">The British ships were newer</button><button data-choice="1" data-fb="Right. A battle that looked like a draw settled the matter at sea.">The German fleet returned to port and never again challenged the blockade in force</button><button data-choice="2" data-fb="That has nothing to do with Jutland.">Germany lost its colonies there</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Compare what each weapon took from neutral ships.">
+            <div class="widget-row-prompt">The United States protested against both sides. Why were its protests against Britain milder?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. Neutral citizens lost cargoes to one weapon and lives to the other.">The British blockade took cargoes and money, while the U-boats took lives</button><button data-choice="1" data-fb="Size is not the reason the lesson gives. Think about what each weapon took from neutrals.">Britain was a larger country than Germany</button><button data-choice="2" data-fb="Not yet. America stayed neutral until 1917, and it protested against both sides.">The United States had already decided to join Britain</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE U-BOAT AND THE GAMBLE</div>
@@ -353,6 +409,33 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">The fighting was fierce and the conditions were harsh. Soldiers suffered from heat, thirst, flies, and disease. Neither side could break through. In December 1915 and January 1916 the Allies withdrew in a well-planned retreat.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">For Australia and New Zealand, the landing on April 25 became a day of national memory, called Anzac Day. For Turkey, it was the first step in the career of the man who would lead its republic.</p></div></div>
     </div></div>
+<div class="optima-widget" id="w20-2-clk">
+<div class="widget-kicker">THE CLOCK ON THE GAMBLE</div>
+<div class="widget-question">Germany's leaders made a promise in January 1917. Slide along the calendar and compare the promise with what happened.</div>
+<div style="background:#FFF8E8; border:1px solid #E8D4A8; border-radius:6px; padding:10px 14px; font-size:14px; color:#1a2340; line-height:1.5; margin-bottom:12px;"><b>The promise.</b> German naval officers promised that Britain would be starved into peace in about five months, before American troops could arrive in force.</div>
+<input type="range" min="0" max="4" step="1" value="2" aria-label="Move along the calendar" style="width:100%; accent-color:#0E1C42; margin:0;">
+<div style="display:flex; justify-content:space-between; font-size:11px; color:#6b7a99; margin:2px 0 10px 0;"><span>Jan</span><span>Feb</span><span>April</span><span>Then</span><span>Verdict</span></div>
+<div data-title style="font-size:15px; color:#0E1C42; margin-bottom:4px;"></div>
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w20-2-clk");
+  var stages = [["Late January: the decision", "Germany's leaders decide to sink every ship that sails to Britain, with no warning. The naval officers make their promise."], ["February: the policy begins", "The new policy starts on February 1. The United States breaks off relations with Germany on February 3."], ["April: the peak", "U-boats sink about 860,000 tons of shipping in a single month. Britain's food stocks shrink to a dangerous level. By now the United States is at war."], ["Then: the convoys", "Britain begins to sail its merchant ships in convoys, guarded by warships. Losses fall, and the food keeps coming."], ["After five months: the verdict", "Britain has not been starved into peace. The gamble failed, and it had a cost: the United States was now at war with Germany."]];
+  var input = root.querySelector("input");
+  var title = root.querySelector("[data-title]");
+  var out = root.querySelector("[data-out]");
+  function show() {
+    var s = stages[+input.value];
+    title.textContent = s[0];
+    out.textContent = s[1];
+  }
+  input.addEventListener("input", show);
+  root.querySelector(".widget-reset").addEventListener("click", function (e) { e.stopPropagation(); input.value = 2; show(); });
+  show();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WHAT THE SEA WAR SHOWED</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Neither side obeyed the old rules of sea warfare for long. Britain stretched the law to blockade neutral trade, and Germany broke it to sink ships without warning. Each said the enemy had started it. But the U-boat campaign did something the blockade did not. It threatened the lives of neutral citizens, including Americans. Next week&rsquo;s lesson shows how that choice helped bring the United States into the war.</p>
@@ -396,6 +479,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

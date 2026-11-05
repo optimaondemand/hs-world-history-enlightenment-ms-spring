@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -323,6 +348,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="display:flex;flex-wrap:wrap;align-items:flex-start;"><div style="flex:1 1 260px;min-width:240px;"><div style="font-size:17px;color:#0E1C42;font-weight:600;">Petrograd<button class="gloss-audio" onclick="speakGloss(event,'Petrograd')" aria-label="Play pronunciation">&#128266;</button></div><p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Petrograd was the Russian capital in 1917. Peter the Great founded the city in 1703 as St. Petersburg, and he meant it to be Russia&rsquo;s &ldquo;window on the West.&rdquo; Its broad avenues, canals, and grand palaces were built to rival the capitals of Europe. In 1914, when Russia went to war with Germany, the city was renamed Petrograd to sound less German.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">The Winter Palace, the tsars&rsquo; great residence, stood beside the Neva River. Factories ringed the city, and their workers were poorly paid and angry by 1917. Both the March and the November revolutions began here. After Lenin&rsquo;s death in 1924 the city was renamed Leningrad. In 1991 it again became St. Petersburg.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w21-2-a">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about the two revolutions.</div>
+        <div class="widget-row" data-correct="1" data-hint="Look at what happened after the summer attack.">
+            <div class="widget-row-prompt">The Provisional Government kept the war going out of loyalty to the Allies. What did that cost it?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson does not say so. Look at what happened to its army.">The Allies stopped sending supplies</button><button data-choice="1" data-fb="Right. A government that cannot hold its army has little left to stand on.">Its last great attack failed, and soldiers deserted by the thousands</button><button data-choice="2" data-fb="The soviet held real power in the streets, but it did not join. The two powers shared Russia.">The soviet joined the government</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Ask who stood in their way.">
+            <div class="widget-row-prompt">Why could the Bolsheviks seize the government on November 7 with so little fighting?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. The lesson calls it a coup by a small, determined group that succeeded partly because no one was ready to resist it.">No one was ready to resist, and they had won a majority in the Petrograd soviet</button><button data-choice="1" data-fb="The lesson does not say so. The army had been melting away, which is not the same as supporting Lenin.">The whole army supported Lenin</button><button data-choice="2" data-fb="The Bolsheviks arrested its ministers. Look at what they did on November 7.">The Provisional Government had already resigned</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">LENIN</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Vladimir Lenin did not seem likely to rule Russia. He had spent years in exile, and in early 1917 he was living in Switzerland. His Bolshevik party was small. But the German government saw a use for him. It allowed him and a few companions to cross Germany in a sealed train, hoping he would stir up trouble for Russia&rsquo;s war effort. <span class="gloss" tabindex="0"><strong>Lenin</strong><button class="gloss-audio" onclick="speakGloss(event,'vlah-DEE-meer LEN-in')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">vlah-DEE-meer LEN-in</span>Vladimir Lenin was the Bolshevik leader who seized power in Russia in November 1917. <a class="om-maplink" href="#fig-21-5-lenin">Read more below.</a></span></span> arrived in Petrograd in April and announced a program, which you will read in your second primary source. He called for no support for the Provisional Government, an end to the war, and all power to the soviets. His slogan was &ldquo;Peace, Land, and Bread.&rdquo;</p>
@@ -335,11 +372,41 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Lenin believed that a small, disciplined party could lead the working class to power. He was a gifted writer and an uncompromising leader. He pressed his party to seize power in 1917, and he insisted on signing a harsh peace with Germany when others wanted to fight on. His government created a secret police, the Cheka, in December 1917.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Lenin suffered strokes beginning in 1922 and died in January 1924. He had built a state that used terror as a tool, and his successor Stalin would turn that tool on his own party.</p></div></div>
     </div></div>
+<div class="optima-widget" id="w21-2-sp">
+<div class="widget-kicker">WHERE DO YOU STAND?</div>
+<div class="widget-question">Was November 1917 a coup or a revolution? Slide to your view.</div>
+<div style="display:flex; justify-content:space-between; gap:12px; font-size:13px; color:#1B6A94; margin-bottom:6px; line-height:1.4;"><span style="max-width:46%;">A coup by a small group</span><span style="max-width:46%; text-align:right;">A revolution of the people</span></div>
+<input type="range" min="0" max="100" step="1" value="50" aria-label="Coup or revolution" style="width:100%; accent-color:#0E1C42; margin:0 0 4px 0;">
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w21-2-sp");
+  var bands = [[20, "You call it a coup. Your best points: the Bolsheviks seized government buildings and arrested the ministers with little fighting, and in the election for a Constituent Assembly they won only about a quarter of the votes. Their soldiers sent the Assembly home after a single day. The hard question: how do you explain that the Bolsheviks had won a majority in the Petrograd soviet that autumn?"], [40, "You lean toward a coup. You can point to the quarter of the vote and the closed Assembly. But you must also face the facts that cut the other way: soldiers were deserting, peasants were seizing the landlords' fields, and the Provisional Government was losing its army."], [60, "Both words fit part of the story. The lesson calls it a coup that succeeded partly because no one was ready to resist. A majority in the Petrograd soviet is real support, but a quarter of the Assembly vote is not. Which fact counts most for you?"], [80, "You lean toward a revolution. You can point to the deserting soldiers, the peasants taking the fields, and the Bolshevik majority in the Petrograd soviet. The hard question: the one national vote the lesson records gave the Bolsheviks about a quarter of the votes. What do you say to that?"], [100, "You call it a revolution of the people. Your best points: an exhausted army, hungry cities, and a government that was losing its soldiers. The hard question: the Bolsheviks won only about a quarter of the votes for the Constituent Assembly and closed it after one day. Does a majority in one city's council speak for a whole nation?"]];
+  var input = root.querySelector("input");
+  var out = root.querySelector("[data-out]");
+  function show() {
+    var v = +input.value;
+    for (var i = 0; i < bands.length; i++) { if (v <= bands[i][0]) { out.textContent = bands[i][1]; return; } }
+  }
+  input.addEventListener("input", show);
+  root.querySelector(".widget-reset").addEventListener("click", function (e) { e.stopPropagation(); input.value = 50; show(); });
+  show();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">PEACE AT A PRICE</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Lenin kept his promise of peace, but not on easy terms. A cease-fire, or <span class="gloss" tabindex="0"><strong>armistice</strong><button class="gloss-audio" onclick="speakGloss(event,'AR-muh-stis')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">AR-muh-stis</span>An agreement to stop fighting. It is not yet a peace treaty. <a class="om-maplink" href="#gloss-armistice">See the glossary box.</a></span></span>, was signed in December 1917. Peace talks began at the town of Brest-Litovsk. The Germans demanded huge areas of land, and the Bolshevik delegation, led by Leon Trotsky, tried to stall. In February Trotsky announced &ldquo;no war, no peace,&rdquo; meaning that Russia would stop fighting but would not sign. Germany answered by marching forward again, covering many miles in days. Lenin then told his party they must sign or lose everything. Some of his closest colleagues disagreed. He won the vote.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The Treaty of Brest-Litovsk, signed in March 1918, took from Russia Poland, the Baltic lands, and Ukraine, along with Finland&rsquo;s independence. Russia lost about a third of its people and much of its coal, iron, and farmland. Germany&rsquo;s gains were a form of <span class="gloss" tabindex="0"><strong>annexation</strong><button class="gloss-audio" onclick="speakGloss(event,'an-ek-SAY-shun')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">an-ek-SAY-shun</span>Taking over another country&rsquo;s land and making it part of your own. <a class="om-maplink" href="#gloss-annexation">See the glossary box.</a></span></span> in all but name. It was exactly the kind of victor&rsquo;s peace that Wilson&rsquo;s speeches said the world should never impose. It showed what Germany might have demanded of the West if it had won.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Yet Germany did not gain as much as it hoped. It had to keep hundreds of thousands of soldiers in the east to hold its new lands. And the treaty was canceled in November 1918, when Germany lost the war.</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">A CLEVER MOVE?</div>
+        <div class="widget-question">Germany let Lenin cross its territory in a sealed train, hoping he would stir up trouble for Russia's war effort. Did that choice help Germany?</div>
+        <div class="widget-options"><button data-response="Lenin kept his promise of peace, and the treaty of March 1918 took Poland, the Baltic lands, and Ukraine from Russia, and with them much of its coal, iron, and farmland.">Yes, Russia left the war</button><button data-response="Germany had to keep hundreds of thousands of soldiers in the east to hold its new lands, so the gain was smaller than it first looked.">Not as much as Germany hoped</button><button data-response="The treaty was canceled in November 1918, when Germany lost the war. And the man the train had carried home built a state that used terror as a tool. Ask whether Germany could have foreseen that.">In the long run it backfired</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">CIVIL WAR AND THE COST</div>
@@ -351,6 +418,72 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">TWO WAYS TO CHANGE A WAR</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Now you can weigh this week&rsquo;s question. Russia&rsquo;s exit let Germany move soldiers west and launch its great offensive in March 1918. America&rsquo;s entry brought money, ships, and eventually millions of fresh men. Each event changed the war. Which changed it more, and why? Write down the best evidence for each side before you begin your discussion post.</p>
     </div>
+<div class="optima-widget" id="w21-2-bal">
+<div class="widget-kicker">WEIGH THE EVIDENCE</div>
+<div class="widget-question">Which changed the war more: America's entry or Russia's exit? For each piece of evidence, decide which event it supports.</div>
+<div style="background:#FFFFFF; border:1px solid #D0D9E8; border-radius:6px; padding:12px 14px 6px 14px; margin-bottom:12px;">
+<div style="display:flex; justify-content:space-between; font-size:13px; color:#0E1C42; margin-bottom:8px;"><span data-ln></span><span data-rn style="text-align:right;"></span></div>
+<div style="position:relative; height:34px; margin-bottom:6px;"><div data-beam style="position:absolute; left:6%; right:6%; top:14px; height:6px; background:#0E1C42; border-radius:3px; transition:transform 0.25s; transform:rotate(0deg);"></div><div style="position:absolute; left:50%; top:20px; width:0; height:0; margin-left:-9px; border-left:9px solid transparent; border-right:9px solid transparent; border-bottom:14px solid #C7922C;"></div></div>
+</div>
+<div data-items></div>
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w21-2-bal");
+  var items = ["Russia's exit let Germany move soldiers west and launch its great offensive in March 1918.", "America's entry brought money, ships, and eventually millions of fresh men.", "By the end of 1917 only a few American divisions were in France.", "Germany had to keep hundreds of thousands of soldiers in the east to hold its new lands.", "In its first year, America's biggest gift was hope: a rich new ally promised that time was on the Allies' side.", "Russia lost Poland, the Baltic lands, and Ukraine, and with them much of its coal, iron, and farmland."];
+  var names = ["America's entry", "Russia's exit"];
+  var state = items.map(function () { return -1; });
+  var box = root.querySelector("[data-items]");
+  var beam = root.querySelector("[data-beam]");
+  var out = root.querySelector("[data-out]");
+  var BTN = "border:1.5px solid #D0D9E8; border-radius:8px; padding:6px 10px; font-size:13px; color:#0E1C42; cursor:pointer; font-family:inherit; background:#FFFFFF;";
+  function draw() {
+    box.innerHTML = "";
+    var n = [0, 0];
+    items.forEach(function (text, i) {
+      var wrap = document.createElement("div");
+      wrap.style.cssText = "background:#FFFFFF; border:1px solid #D0D9E8; border-radius:6px; padding:10px 12px; margin-bottom:8px;";
+      var p = document.createElement("div");
+      p.style.cssText = "font-size:14px; color:#0E1C42; line-height:1.5; margin-bottom:8px;";
+      p.textContent = (i + 1) + ". " + text;
+      var btns = document.createElement("div");
+      btns.style.cssText = "display:flex; flex-wrap:wrap; gap:8px;";
+      [0, 1].forEach(function (side) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.style.cssText = BTN;
+        b.textContent = names[side];
+        if (state[i] === side) { b.style.background = "#0E1C42"; b.style.color = "#FFFFFF"; b.style.borderColor = "#0E1C42"; }
+        b.addEventListener("click", function () { state[i] = (state[i] === side) ? -1 : side; draw(); });
+        btns.appendChild(b);
+      });
+      wrap.appendChild(p);
+      wrap.appendChild(btns);
+      box.appendChild(wrap);
+      if (state[i] >= 0) { n[state[i]]++; }
+    });
+    var deg = Math.max(-22, Math.min(22, (n[1] - n[0]) * 5));
+    beam.style.transform = "rotate(" + deg + "deg)";
+    root.querySelector("[data-ln]").textContent = names[0] + " (" + n[0] + ")";
+    root.querySelector("[data-rn]").textContent = names[1] + " (" + n[1] + ")";
+    var placed = n[0] + n[1];
+    if (placed < items.length) {
+      out.textContent = placed + " of " + items.length + " placed. For each piece of evidence, decide which event it supports most.";
+    } else {
+      var lead = n[0] === n[1] ? "Your scale is level. You have split the evidence evenly, so your answer will rest on which pieces weigh most. Choose the one you would defend first." : (n[0] > n[1] ? "Your scale tilts toward America's entry. Test it: item 3 says only a few American divisions were in France by the end of 1917. Did America's help come in time to matter?" : "Your scale tilts toward Russia's exit. Test it: item 4 says Germany had to keep hundreds of thousands of soldiers in the east. Did Russia's exit help Germany as much as it first appears?");
+      out.textContent = lead + " " + "Notice that some evidence cuts both ways. Where you place it is an argument, and you should be ready to defend it in your discussion post.";
+    }
+  }
+  root.querySelector(".widget-reset").addEventListener("click", function (e) {
+    e.stopPropagation();
+    state = items.map(function () { return -1; });
+    draw();
+  });
+  draw();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
         <p style="font-size:16px; color:#1a2340; line-height:1.6;">Ready to check your understanding? Look for the Primary Source Exercise in your Canvas course navigation.</p><p style="font-size:13px; color:#6b7a99; margin-top:8px;">If this assessment has not yet been assigned in Canvas, it will appear there once your teacher publishes it.</p>
@@ -388,6 +521,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

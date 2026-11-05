@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -308,6 +333,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Wilson also tried to act as a peacemaker. In December 1916 he asked both sides to state their war aims. Germany answered vaguely, and the Allies replied with demands that no peace conference could easily meet. The fighting went on.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In January 1917 Wilson offered a plan. He told the Senate that the war should end in &ldquo;a peace without victory.&rdquo; Victory, he said, would mean a peace forced on the loser, and such a peace would not last. It was a lofty hope, and it was a risky one, because it asked proud nations to accept an end without a winner. Germany answered it within days.</p>
     </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">WHAT DO YOU THINK?</div>
+        <div class="widget-question">In January 1917 Wilson asked for a peace without victory. Was that a realistic hope?</div>
+        <div class="widget-options"><button data-response="Wilson believed a peace forced on a loser would not last. But the lesson calls the hope lofty and risky, because it asked proud nations to end a war with no winner after enormous losses.">Yes, tired nations might have accepted it</button><button data-response="Germany answered within days, and the next section shows how. The Allies, for their part, had answered his earlier request with demands that no peace conference could easily meet.">No, proud nations would not accept it</button><button data-response="That is the kind of question historians ask about turning points. Notice that the answer came from Berlin within days, as a decision and not an accident. Ask who made it, and what else they might have done.">It might have worked if Germany had answered differently</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">TWO MISTAKES IN BERLIN</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">On January 31 Germany announced that its <span class="gloss" tabindex="0"><em>U-boats</em><button class="gloss-audio" onclick="speakGloss(event,'YOO-boht')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">YOO-boht</span>Short for the German word Unterseeboot, meaning &lsquo;undersea boat.&rsquo; It is the name for a German submarine. <a class="om-maplink" href="#gloss-u-boat">See the glossary box.</a></span></span> would sink all ships near Britain without warning. Wilson broke off diplomatic relations on February 3, but he still hoped to avoid war.</p>
@@ -329,6 +361,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">In January 1917 he supported the decision to resume unrestricted submarine warfare. He also sent the telegram that bears his name, offering Mexico an alliance against the United States. When the British gave the text to Wilson, many people could not believe a government would do something so reckless.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Then Zimmermann told journalists in March that the message was real. His statement ended any doubt in America. He left office in August 1917.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w21-1-a">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about the telegram.</div>
+        <div class="widget-row" data-correct="2" data-hint="Ask who in America felt the danger, and why.">
+            <div class="widget-row-prompt">The offer to Mexico was not realistic. Why did the telegram still change American opinion?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Mexico's government declined. The telegram mattered for another reason.">Mexico accepted the offer</button><button data-choice="1" data-fb="Many Americans first thought so. Then Zimmermann confirmed it himself in public.">It was proved to be a British forgery</button><button data-choice="2" data-fb="Right. Americans in the West and South, who had cared little about the war, now saw danger close to home.">It put a danger on America's own border, and Zimmermann confirmed it was real</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Think about what else the British were protecting.">
+            <div class="widget-row-prompt">Why did the British wait weeks before showing the telegram to the Americans?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. Room 40 had broken the cipher, and the British wanted to keep that secret.">They had to find a way to show it without revealing that they could read the German code</button><button data-choice="1" data-fb="They had read it. The delay was about protecting how they had read it.">They were not sure the message was real</button><button data-choice="2" data-fb="Nothing in the lesson says so. Think about what the British stood to lose by showing it too soon.">Wilson had asked them to wait</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE DECISION</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In mid-March the news from Russia changed the picture. Tsar Nicholas II gave up his throne on March 15. Until then, some Americans had hesitated to fight beside an <span class="gloss" tabindex="0"><strong>autocracy</strong><button class="gloss-audio" onclick="speakGloss(event,'aw-TOK-ruh-see')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">aw-TOK-ruh-see</span>Government by one ruler who holds unlimited power. <a class="om-maplink" href="#gloss-autocracy">See the glossary box.</a></span></span>. Now the Allies could be described as a league of free peoples. In the same week, German submarines sank three American merchant ships. Wilson&rsquo;s cabinet voted for war.</p>
@@ -342,6 +386,24 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Wilson kept the United States neutral for nearly three years. When he finally asked for war in April 1917, he cast it as a crusade for democracy. He spoke with great skill, but critics said that he mixed moral language with ordinary power politics.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">At the end of the war he traveled to Paris, the first sitting president to cross the Atlantic, to help make the peace. You will read about his hopes for the peace, and the Senate&rsquo;s response, in a later lesson. He suffered a severe stroke in 1919 and left office in 1921.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w21-1-b">
+        <div class="widget-kicker">SORT THE CAUSES</div>
+        <div class="widget-question">Wilson spoke of ideals, but the lesson says other forces pushed America toward war. Sort each cause.</div>
+        <div class="widget-row" data-correct="1" data-hint="Ask whether this was something that happened, or something Wilson argued.">
+            <div class="widget-row-prompt">Wilson said America must fight for the rights of free peoples.</div>
+            <div class="widget-options"><button data-choice="0" data-fb="That was a speech about purposes, not an event on the ground.">A real event</button><button data-choice="1" data-fb="Right. This is the cause Wilson put into words.">An ideal</button><button data-choice="2" data-fb="He spoke of rights, not of loans or profits.">A money interest</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Was this a speech, a loan, or something that happened?">
+            <div class="widget-row-prompt">Three American merchant ships were sunk by German submarines in one week.</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. Ships and lives were being lost, and that pushed the country toward war.">A real event</button><button data-choice="1" data-fb="This was not an argument. It was something that happened.">An ideal</button><button data-choice="2" data-fb="Ships and lives were lost, which is more than a matter of money.">A money interest</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Which cause is about what America stood to lose?">
+            <div class="widget-row-prompt">American banks had lent the Allies billions of dollars.</div>
+            <div class="widget-options"><button data-choice="0" data-fb="A loan is not an ideal.">An ideal</button><button data-choice="1" data-fb="It is a fact, but the lesson names it as a stake the country had in the outcome.">A real event</button><button data-choice="2" data-fb="Right. America had money tied up in an Allied victory.">A money interest</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Did this happen, or was it argued?">
+            <div class="widget-row-prompt">The Zimmermann Telegram offered Mexico an alliance against the United States.</div>
+            <div class="widget-options"><button data-choice="0" data-fb="This was about danger to the border, not about loans.">A money interest</button><button data-choice="1" data-fb="The telegram was a document that arrived, not a principle.">An ideal</button><button data-choice="2" data-fb="Right. It was a real event that put danger on America's own border.">A real event</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WHAT AMERICA COULD DO</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">America&rsquo;s army in April 1917 was small. It had about 130,000 regular soldiers, plus the state National Guard. It had almost no tanks, few modern guns, and no experience of this kind of war. In May Congress passed a law to draft men, and the army began to grow. General John Pershing took command of the American Expeditionary Force. He insisted that Americans fight as a separate army under their own flag, rather than serving in British and French units. British and French leaders wanted men at once and argued with him.</p>
@@ -354,6 +416,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">The Germans sent many messages by radio and by cable, using ciphers that replaced words and letters with numbers. Room 40 collected German codebooks and slowly learned to read the messages. Britain also cut Germany&rsquo;s overseas telegraph cables early in the war, which forced German diplomats to send messages through other countries&rsquo; lines.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">In January 1917 Room 40 read Zimmermann&rsquo;s telegram. The British kept it quiet until they could use it safely. The episode shows how information, as well as armies, could change the course of a war.</p></div></div>
     </div></div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">IF YOU WERE AN ALLIED LEADER</div>
+        <div class="widget-question">It is spring 1917 and America has just declared war. Your armies are tired. What do you ask for first?</div>
+        <div class="widget-options"><button data-response="British and French leaders wanted men at once, and they argued with Pershing, who insisted that Americans fight as a separate army under their own flag. America had about 130,000 regular soldiers and almost no tanks and few modern guns, and only a few divisions were in France by the end of the year.">Soldiers, right now</button><button data-response="American destroyers did join the convoys that protected ships from U-boats. This help came quickly, while an army still had to be drafted and trained.">Ships and escorts for the convoys</button><button data-response="American banks kept lending, and American farms and factories fed and armed the Allies. At home the government took charge of the economy, with a Food Administration under Herbert Hoover, and Liberty Bonds sold to ordinary citizens raised about seventeen billion dollars.">Money and supplies</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
         <p style="font-size:16px; color:#1a2340; line-height:1.6;">Ready to check your understanding? Look for the Primary Source Exercise in your Canvas course navigation.</p><p style="font-size:13px; color:#6b7a99; margin-top:8px;">If this assessment has not yet been assigned in Canvas, it will appear there once your teacher publishes it.</p>
@@ -390,6 +459,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

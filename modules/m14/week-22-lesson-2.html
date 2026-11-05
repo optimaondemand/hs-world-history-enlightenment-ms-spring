@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -307,6 +332,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In the Middle East, Britain and France divided much of the old Ottoman lands. Under the League&rsquo;s system of <span class="gloss" tabindex="0"><strong>mandates</strong><button class="gloss-audio" onclick="speakGloss(event,'MAN-dayt')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">MAN-dayt</span>Land taken from a defeated empire and given to a victorious nation to govern for a time, under the League of Nations. <a class="om-maplink" href="#gloss-mandate">See the glossary box.</a></span></span>, Britain took Iraq and Palestine, and France took Syria and Lebanon. During the war Britain had made promises to Arab leaders and also promised a national home for Jews in Palestine. These promises conflicted, and the conflict would last. A Turkish army led by Mustafa Kemal, whom you met at Gallipoli, rejected the first plan for dividing Turkey itself. A new treaty in 1923 recognized the modern Turkish republic.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Many of the new nations were small and weak. They sat between a resentful Germany and a Russia that was now Communist. Each held minorities who felt like strangers. About three million Germans lived in the new Czechoslovakia, for instance. The peacemakers had made a new map without making new strength. That would matter in 1938.</p>
     </div>
+<div class="optima-widget ow-select" id="w22-2-a">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about the new map.</div>
+        <div class="widget-row" data-correct="2" data-hint="Think about who lived inside the new borders.">
+            <div class="widget-row-prompt">About three million Germans lived in the new Czechoslovakia. Why did that matter?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson says the opposite: many of the new nations were small and weak.">It proved the new nations were strong</button><button data-choice="1" data-fb="Czechoslovakia was a new nation. The point is about the people inside its borders.">It meant Czechoslovakia belonged to Germany</button><button data-choice="2" data-fb="Right. The peacemakers made a new map without making new strength. That would matter in 1938.">New borders could not fit every people, so minorities lived as strangers between a resentful Germany and a Communist Russia</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Ask whether the two promises could both be kept.">
+            <div class="widget-row-prompt">Britain made promises to Arab leaders and also promised a national home for Jews in Palestine. What did that create?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. The lesson says these promises conflicted and that the conflict would last.">Promises that conflicted, and a conflict that would last</button><button data-choice="1" data-fb="No. The promises pulled in different directions.">A settled agreement over Palestine</button><button data-choice="2" data-fb="Under the mandates, Britain took Iraq and Palestine, and France took Syria and Lebanon.">A treaty that gave Palestine to France</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WILSON'S LEAGUE</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">For Wilson the most important part of the peace was the League of Nations. Its Covenant, or constitution, was built into the Treaty of Versailles. Member nations promised to settle disputes peacefully. Article 10 went further. It pledged members to respect and defend one another&rsquo;s borders against attack. This idea is called <span class="gloss" tabindex="0"><strong>collective security</strong><button class="gloss-audio" onclick="speakGloss(event,'kuh-LEK-tiv sih-KYUR-ih-tee')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">kuh-LEK-tiv sih-KYUR-ih-tee</span>An arrangement in which many nations promise to defend one another against an attacker. <a class="om-maplink" href="#gloss-collective-security">See the glossary box.</a></span></span>. The League would meet in Geneva and have an assembly of all members and a council of the great powers.</p>
@@ -332,6 +369,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Lodge did not oppose all international cooperation. He supported joining the war, and he wanted Germany punished. But he distrusted Article 10 of the League Covenant because it might commit the United States to wars it did not choose. He proposed fourteen reservations, a number some people said was meant to mock Wilson&rsquo;s Fourteen Points.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Wilson and Lodge disliked each other deeply, and historians still debate how much that personal quarrel shaped the outcome.</p></div></div>
     </div></div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">WHO SHOULD HAVE GIVEN WAY?</div>
+        <div class="widget-question">The two sides were not far apart, and a compromise might have passed. Who should have given way?</div>
+        <div class="widget-options"><button data-response="The lesson says that if Wilson had accepted a compromise, the treaty might have passed. His refusal to bargain kept the middle group of senators from joining his side. Ask what he would have lost by bending, and what the nation lost by his refusal.">Wilson should have accepted Lodge's reservations</button><button data-response="Lodge feared that Article 10 could commit American soldiers to fight without a vote of Congress, which is a real constitutional worry. He also disliked Wilson deeply. Historians still debate how much of his opposition was principle and how much was a personal quarrel.">Lodge should have dropped his reservations</button><button data-response="Wilson defended a League he thought would keep the peace. Lodge defended the power of Congress to decide on war. The cost of two principled stands was a failed treaty, a League without its champion, and France left to rely on its own strength.">Neither: each defended something that mattered</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE ECONOMIST'S WARNING</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The treaty also met opposition from a young British economist, John Maynard Keynes. He had served at the conference as an adviser to the British Treasury. In June 1919, in despair, he resigned. That winter he published a book, <em>The Economic Consequences of the Peace</em>. It argued that the reparations were impossible to pay and that crushing Germany&rsquo;s economy would drag down all of Europe. The book became a bestseller. You will read a part of it in this week&rsquo;s second primary source.</p>
@@ -343,11 +387,46 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">He resigned in June 1919 and wrote his book at great speed. It described the peacemakers in memorable and often unkind portraits. Keynes warned that the treaty would impoverish Europe and breed a desire for revenge.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Later he became the most famous economist of his century. In the 1930s he argued that governments should spend money to fight unemployment. His ideas influenced many nations, including Roosevelt&rsquo;s America, which you will study next week.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w22-2-b">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about Keynes and his critics.</div>
+        <div class="widget-row" data-correct="0" data-hint="Ask what the book changed: the terms, or opinion?">
+            <div class="widget-row-prompt">Keynes may have exaggerated, but his book still shaped events. How?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. A book can change what a nation is willing to enforce.">It shaped public opinion, so many people came to think the treaty unjust, which made it harder to enforce</button><button data-choice="1" data-fb="The book argued that the reparations were impossible to pay. It did not raise them.">It forced Germany to pay more</button><button data-choice="2" data-fb="The Senate voted the treaty down. The book made many people doubt it.">It persuaded the Senate to approve the treaty</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Look for what Germany actually paid.">
+            <div class="widget-row-prompt">Which fact supports later historians who say Keynes exaggerated?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Germany lost all its overseas colonies.">The treaty let Germany keep its colonies</button><button data-choice="1" data-fb="That is why his words carried weight. It does not show he exaggerated.">Keynes had been an adviser to the British Treasury</button><button data-choice="2" data-fb="Right. These historians point out that Germany paid only a fraction of what was demanded and borrowed heavily. Some say it could have paid more if it had wished.">Germany paid only a fraction of what was demanded, and borrowed heavily from American banks</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">TOO HARSH OR TOO WEAK?</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Now you are ready for this week&rsquo;s question. One view says the peace was too harsh. It left Germany angry and gave extremists a cause. Another view says it was too weakly enforced. The winners lost their nerve, quarrelled with one another, and let Germany slip out of its limits. A third view reminds us that the peacemakers faced hard choices. A harsher peace might have needed a long occupation that none of their voters would accept.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Whichever view you favor, notice how many separate decisions fed the outcome. The armistice, the choice of terms, Wilson&rsquo;s stubbornness, and the Senate&rsquo;s vote might each have gone another way. Nothing was fated. As you read this week&rsquo;s sources, ask who made each choice and what else they might have done.</p>
     </div>
+<div class="optima-widget" id="w22-2-sp">
+<div class="widget-kicker">WHERE DO YOU STAND?</div>
+<div class="widget-question">Was the Treaty of Versailles too harsh or too weakly enforced? Slide to your view.</div>
+<div style="display:flex; justify-content:space-between; gap:12px; font-size:13px; color:#1B6A94; margin-bottom:6px; line-height:1.4;"><span style="max-width:46%;">Too harsh to be forgiven</span><span style="max-width:46%; text-align:right;">Too weak to be enforced</span></div>
+<input type="range" min="0" max="100" step="1" value="50" aria-label="Too harsh or too weak" style="width:100%; accent-color:#0E1C42; margin:0 0 4px 0;">
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w22-2-sp");
+  var bands = [[20, "You say the peace was too harsh. Your best points: Germany was not allowed to negotiate, many Germans called it a dictated peace, and the war guilt clause and the reparations left a grievance that extremists could use. The hard question: Germany paid only a fraction of what was demanded and borrowed heavily from American banks. How crushing could it have been?"], [40, "You lean toward harsh. You can point to the dictated peace and the sums demanded. But you must answer the case that the treaty was weakly enforced, since Germany slipped out of its limits. Was it harshness that failed, or the will to enforce?"], [60, "You hold that it was both: harsh enough to be resented and not enforced enough to be obeyed. The lesson also offers a third view, that a harsher peace might have needed a long occupation that none of the peacemakers' voters would accept. Does that rescue the treaty, or condemn it?"], [80, "You lean toward weak. You can point to winners who quarreled with one another and let Germany slip out of its limits, and to the guarantee of France's safety that never took effect. The hard question: why were the winners so unwilling to enforce what they had written?"], [100, "You say it was too weakly enforced. Your best points: the winners lost their nerve, the Senate refused the League, and France was left to rely on its own strength. The hard question: a harsher peace might have needed a long occupation that no voter would accept. Who would have enforced it?"]];
+  var input = root.querySelector("input");
+  var out = root.querySelector("[data-out]");
+  function show() {
+    var v = +input.value;
+    for (var i = 0; i < bands.length; i++) { if (v <= bands[i][0]) { out.textContent = bands[i][1]; return; } }
+  }
+  input.addEventListener("input", show);
+  root.querySelector(".widget-reset").addEventListener("click", function (e) { e.stopPropagation(); input.value = 50; show(); });
+  show();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
         <p style="font-size:16px; color:#1a2340; line-height:1.6;">Ready to check your understanding? Look for the Primary Source Report in your Canvas course navigation.</p><p style="font-size:13px; color:#6b7a99; margin-top:8px;">If this assessment has not yet been assigned in Canvas, it will appear there once your teacher publishes it.</p>
@@ -385,6 +464,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

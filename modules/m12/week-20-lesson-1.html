@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -320,6 +345,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:14px; color:#1a2340; line-height:1.5;">French slang for an infantry soldier. It means &lsquo;hairy one&rsquo; and it was a name soldiers gave themselves.</div>
     </div>
     </div>
+<div class="optima-widget ow-select" id="w20-1-a">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about whole peoples at war.</div>
+        <div class="widget-row" data-correct="1" data-hint="Ask who had to solve the problem, and where.">
+            <div class="widget-row-prompt">In 1915 a shortage of shells led Britain to create a Ministry of Munitions. What does that show about the war?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The opposite. Armies used up shells faster than anyone expected, which is why factories had to be organized.">The army no longer needed shells</button><button data-choice="1" data-fb="Right. When shells run short at the front, a ministry at home has to fix it. The line between soldier and worker was fading.">Factories at home had become part of the fighting</button><button data-choice="2" data-fb="Nothing in the lesson says so. The shortage was at the front, and the answer was more work at home.">The navy was taking over the army's work</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Look at what happened to German trade.">
+            <div class="widget-row-prompt">Germany suffered more from hunger than Britain did. Which fact in the lesson explains the difference best?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. Trade by sea was cut off, and the failed potato crop of 1916 made it far worse.">The British navy cut off German trade by sea, and food grew scarce</button><button data-choice="1" data-fb="Germany's officials organized its raw materials and factories.">Germany had no factories to organize</button><button data-choice="2" data-fb="The lesson gives no such reason. The trouble was a shortage of supply.">German families refused to accept rationing</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE BATTLE FOR BELIEF</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">A government that needs its people&rsquo;s sons, labor, and savings needs their belief. So each government turned to <span class="gloss" tabindex="0"><strong>propaganda</strong><button class="gloss-audio" onclick="speakGloss(event,'prop-uh-GAN-duh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">prop-uh-GAN-duh</span>Information, true or false, spread to win support for a cause. The word usually points to messages built to move feelings more than to inform. <a class="om-maplink" href="#gloss-propaganda">See the glossary box.</a></span></span>: information, true or false, spread to win support. Britain set up a secret propaganda bureau in 1914. In May 1915 it published the Bryce Report, an official study of German conduct in Belgium. German troops had in fact killed thousands of Belgian civilians in the first weeks of the war. They burned the old university library at Louvain. Later historians confirmed the killings. But they also found that some of the most horrible stories in the report, such as tales of mutilated children, rested on weak or no evidence. You will read part of the report in this week&rsquo;s first primary source.</p>
@@ -338,6 +375,21 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Creel&rsquo;s committee printed millions of pamphlets, sent out news stories, made films, and organized thousands of volunteer speakers, called Four Minute Men, who spoke in theaters between films. Creel said he wanted to persuade rather than to censor. Yet the committee also pressed newspapers to follow its guidelines.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">After the war, Americans debated whether such an agency belonged in a free country. Creel defended his work, and many people remained uneasy about it.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w20-1-b">
+        <div class="widget-kicker">SORT THE STORIES</div>
+        <div class="widget-question">Later historians looked hard at the stories told about Germany. Where does each one belong?</div>
+        <div class="widget-row" data-correct="2" data-hint="Remember what later historians found about the killings.">
+            <div class="widget-row-prompt">German troops killed thousands of Belgian civilians in the first weeks of the war.</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Later historians confirmed the killings. This was a real and terrible fact.">Rested on weak or no evidence</button><button data-choice="1" data-fb="It is true, and it was used. But the lesson's sharper point is that historians confirmed the killings themselves.">True, but used to stir feeling</button><button data-choice="2" data-fb="Right. The killings were real, which is why the weak stories around them did so much damage to trust.">Confirmed by later historians</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Look at what the lesson says about the worst stories.">
+            <div class="widget-row-prompt">Tales of mutilated children in the Bryce Report.</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. Some of the most horrible stories in the report rested on weak or no evidence.">Rested on weak or no evidence</button><button data-choice="1" data-fb="No. The killings were confirmed, but these particular stories were not.">Confirmed by later historians</button><button data-choice="2" data-fb="The lesson says these stories rested on weak or no evidence, so they were not true stories used for effect.">True, but used to stir feeling</button></div>
+        </div><div class="widget-row" data-correct="1" data-hint="Ask whether the story was false, or only used.">
+            <div class="widget-row-prompt">The shooting of Edith Cavell in October 1915.</div>
+            <div class="widget-options"><button data-choice="0" data-fb="It happened, and she admitted what she had done. But the lesson makes a finer point about how her case was used.">Confirmed by later historians</button><button data-choice="1" data-fb="Right. Her case shows how a true story could be used as propaganda without becoming false.">True, but used to stir feeling</button><button data-choice="2" data-fb="No. She admitted what she had done, and a German military court sentenced her.">Rested on weak or no evidence</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">FREEDOM UNDER STRAIN</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Governments also silenced opponents. In Britain a law called the Defence of the Realm Act, passed in August 1914, gave the government wide powers, including control of the press. In the United States, Congress passed the Espionage Act in June 1917 and the Sedition Act in May 1918. These laws made it a crime to interfere with the draft or to speak against the war effort in certain ways. The Post Office refused to carry newspapers it judged disloyal.</p>
@@ -346,10 +398,40 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Free states gave reasons for these limits. A leaflet that told soldiers to refuse orders could cost lives at the front, and a nation at war cannot afford to be divided. Critics answered that a free country that silences its critics has given up the very thing it is defending.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In 1919 the Supreme Court heard a case about a Socialist leaflet. You will read part of its decision in this week&rsquo;s second primary source.</p>
     </div>
+<div class="optima-widget" id="w20-1-sp">
+<div class="widget-kicker">WHERE DO YOU DRAW THE LINE?</div>
+<div class="widget-question">How much may a free state limit speech in wartime? Slide to your view.</div>
+<div style="display:flex; justify-content:space-between; gap:12px; font-size:13px; color:#1B6A94; margin-bottom:6px; line-height:1.4;"><span style="max-width:46%;">Protect almost every critic</span><span style="max-width:46%; text-align:right;">Silence any dissent that could hurt the war</span></div>
+<input type="range" min="0" max="100" step="1" value="50" aria-label="How far a free state may limit speech" style="width:100%; accent-color:#0E1C42; margin:0 0 4px 0;">
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w20-1-sp");
+  var bands = [[20, "You would protect almost every critic. Your best point: a free country that silences its critics has given up the very thing it is defending. Eugene Debs gave a speech against the war and was sentenced to ten years, and in 1920, from his cell, he won almost a million votes. The hard question for you: a leaflet that told soldiers to refuse orders could cost lives at the front. Where would you stop it?"], [40, "You would allow only narrow limits. You can point to Debs, and you accept that some speech does real harm. The hard question: some of the people caught by these laws were real spies and saboteurs, and others were only critics. How would your rule tell them apart?"], [60, "You want a line somewhere in the middle. The lesson says that is exactly the hard part. Name one kind of speech you would punish and one you would not, and say what separates them."], [80, "You would allow wide limits. Your best point: a nation at war cannot afford to be divided, and a leaflet that told soldiers to refuse orders could cost lives. The hard question: some of those caught were only critics. What did the state gain from jailing them, and what did it risk?"], [100, "You would silence dissent whenever it threatens the war effort. The price: the Post Office refused to carry newspapers it judged disloyal, and a critic like Debs got ten years. A republic depends on its citizens' access to the truth. What happens to a free people when the government decides what they may hear?"]];
+  var input = root.querySelector("input");
+  var out = root.querySelector("[data-out]");
+  function show() {
+    var v = +input.value;
+    for (var i = 0; i < bands.length; i++) { if (v <= bands[i][0]) { out.textContent = bands[i][1]; return; } }
+  }
+  input.addEventListener("input", show);
+  root.querySelector(".widget-reset").addEventListener("click", function (e) { e.stopPropagation(); input.value = 50; show(); });
+  show();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">TWO QUESTIONS FOR A FREE PEOPLE</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">A republic depends on its citizens&rsquo; virtue and on their access to the truth. Both were under pressure. A government that wins support through lies may win the war and lose something else. After 1918, many people said they would never again trust official claims about atrocities. Some historians argue that this distrust made it harder for the world to believe true reports about Nazi crimes in the 1940s.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">At the same time, a government that cannot unite its people cannot fight. Hegel said war tests a state&rsquo;s health, and the test is as much about unity as about weapons. The hard question is where to draw the line. Wartime laws were meant to protect the nation. Did they protect it, or did they threaten the freedom the nation was fighting for?</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">WHAT WOULD WORRY YOU MOST?</div>
+        <div class="widget-question">A free country at war can lose different things. Which loss would worry you most?</div>
+        <div class="widget-options"><button data-response="The lesson says a government that wins support through lies may win the war and lose something else. After 1918 many people said they would never again trust official claims about atrocities, and some historians say that distrust made it harder to believe true reports about Nazi crimes in the 1940s.">Citizens can no longer trust what the government tells them</button><button data-response="Debs was sentenced to ten years for a speech against the war, and he still won almost a million votes from his cell. Defenders of the laws pointed to leaflets that could cost lives at the front. Where would you draw the line?">A critic can be jailed for a speech</button><button data-response="German classes ended, streets were renamed, and in 1918 a mob lynched Robert Prager, a German-born man suspected of disloyalty. A jury later acquitted the men accused of killing him. Notice that this was not the government's law. What holds a free people back when no law does?">Neighbors turn on people because of their names</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">FOR YOUR DISCUSSION POST</div>
@@ -391,6 +473,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

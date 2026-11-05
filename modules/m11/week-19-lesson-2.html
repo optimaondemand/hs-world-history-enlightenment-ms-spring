@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -338,11 +363,77 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Gas killed far fewer men than artillery did. But it spread terror, and it injured many soldiers for life. It forced every army to develop gas masks, and soldiers had to learn to put them on within seconds. A gas alarm could turn a quiet night into a scramble in the dark.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">After the war, many nations agreed to ban the use of poison gas in war, though the weapons were never fully forgotten.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w19-2-a">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about life in the trenches.</div>
+        <div class="widget-row" data-correct="1" data-hint="Look at the paragraph about how the trenches were built.">
+            <div class="widget-row-prompt">Trenches zigzagged instead of running in straight lines. What problem did that solve?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Digging speed is not the reason the lesson gives. Look at what one shell or one rifleman could do to a straight trench.">It made the trenches faster to dig</button><button data-choice="1" data-fb="Right. A straight trench let one burst of fire reach a whole line of men. Zigzags cut that reach.">One shell or one enemy rifleman could not sweep a long stretch</button><button data-choice="2" data-fb="The lesson does not give that reason. The danger it names is shells and rifle fire.">It hid the trenches from the enemy's view</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Think about what happened to a soldier who stood up.">
+            <div class="widget-row-prompt">A general says, &ldquo;We will win if we simply attack harder.&rdquo; Which fact from the lesson best answers him?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. Firepower favored the defender. That is why the armies dug in, and why attacks cost so many men for so little ground.">Machine guns and artillery could cut down an advancing line in seconds, while a soldier who dug in could survive</button><button data-choice="1" data-fb="True, but it does not answer him. Ask what happened to men who crossed that ground.">In places no man's land was only a few hundred feet wide</button><button data-choice="2" data-fb="Rotation helped the men, but it does not show why a harder attack would fail.">Soldiers rotated to the rear after a few days in the front line</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">ATTRITION</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">By 1915 the generals faced a puzzle. Frontal attacks cost huge numbers of men and gained little ground. Some commanders came to believe in <span class="gloss" tabindex="0"><strong>attrition</strong><button class="gloss-audio" onclick="speakGloss(event,'uh-TRISH-un')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">uh-TRISH-un</span>Wearing down an enemy, bit by bit, until he can no longer fight. <a class="om-maplink" href="#gloss-attrition">See the glossary box.</a></span></span>: wearing the enemy down until he could no longer fight. If each side lost men at the same rate, the side with more men and more factories would win in the end.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">This was a cold way to think about war. It also helped explain why the leaders of every country kept going. None could stop without admitting defeat to their own people. The war had become a test of which nation could bear the most.</p>
     </div>
+<div class="optima-widget" id="w19-2-sim">
+<div class="widget-kicker">TRY THE ARITHMETIC</div>
+<div class="widget-question">Two imaginary armies lose the same number of men every month. Change the numbers and watch which one runs out first. The numbers are made up, to show an idea and not to report history.</div>
+<div style="display:flex; flex-wrap:wrap; gap:14px; margin-bottom:12px;">
+<label style="flex:1 1 200px; font-size:14px; color:#0E1C42;">Army A starts with <b data-v="a">800</b> thousand men<input data-in="a" type="range" min="200" max="1200" step="50" value="800" style="width:100%; accent-color:#0E1C42;"></label>
+<label style="flex:1 1 200px; font-size:14px; color:#0E1C42;">Army B starts with <b data-v="b">600</b> thousand men<input data-in="b" type="range" min="200" max="1200" step="50" value="600" style="width:100%; accent-color:#2196D0;"></label>
+<label style="flex:1 1 200px; font-size:14px; color:#0E1C42;">Each army loses <b data-v="r">50</b> thousand men a month<input data-in="r" type="range" min="10" max="100" step="5" value="50" style="width:100%; accent-color:#C7922C;"></label>
+</div>
+<label style="display:block; font-size:14px; color:#0E1C42; margin-bottom:10px;">Month <b data-v="m">6</b><input data-in="m" type="range" min="0" max="30" step="1" value="6" style="width:100%; accent-color:#0E1C42;"></label>
+<div style="background:#FFFFFF; border:1px solid #D0D9E8; border-radius:6px; padding:12px 14px; margin-bottom:10px;">
+<div style="font-size:13px; color:#0E1C42; margin-bottom:4px;">Army A: <span data-n="a"></span></div>
+<div style="background:#EEF2F8; border-radius:4px; height:18px; margin-bottom:10px; overflow:hidden;"><div data-bar="a" style="background:#0E1C42; height:18px; width:0%; transition:width 0.2s;"></div></div>
+<div style="font-size:13px; color:#0E1C42; margin-bottom:4px;">Army B: <span data-n="b"></span></div>
+<div style="background:#EEF2F8; border-radius:4px; height:18px; overflow:hidden;"><div data-bar="b" style="background:#2196D0; height:18px; width:0%; transition:width 0.2s;"></div></div>
+</div>
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<div style="font-size:12px; color:#6b7a99; line-height:1.5; margin-bottom:6px;">This simple model leaves out new recruits and new factories. In the real war those mattered too.</div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w19-2-sim");
+  var DEF = { a: 800, b: 600, r: 50, m: 6 };
+  function inp(k) { return root.querySelector('[data-in="' + k + '"]'); }
+  function val(k) { return +inp(k).value; }
+  function update() {
+    var a = val("a"), b = val("b"), r = val("r"), m = val("m");
+    ["a", "b", "r", "m"].forEach(function (k) { root.querySelector('[data-v="' + k + '"]').textContent = val(k); });
+    var ra = Math.max(0, a - r * m), rb = Math.max(0, b - r * m);
+    var mx = Math.max(a, b);
+    root.querySelector('[data-bar="a"]').style.width = (ra / mx * 100) + "%";
+    root.querySelector('[data-bar="b"]').style.width = (rb / mx * 100) + "%";
+    root.querySelector('[data-n="a"]').textContent = ra > 0 ? ra + " thousand men left" : "no men left to fight";
+    root.querySelector('[data-n="b"]').textContent = rb > 0 ? rb + " thousand men left" : "no men left to fight";
+    var msg;
+    if (a === b) {
+      msg = "The armies are the same size and lose men at the same rate, so both run out in month " + Math.ceil(a / r) + ". Numbers alone cannot decide this fight. Something else has to.";
+    } else {
+      var small = a < b ? "A" : "B", big = a < b ? "B" : "A";
+      var ts = Math.ceil(Math.min(a, b) / r);
+      var left = Math.max(0, mx - r * ts);
+      msg = "Army " + small + " can no longer fight in month " + ts + ". By then Army " + big + " still has " + left + " thousand men. Equal losses did not mean an equal outcome. The bigger army wins by outlasting the smaller one.";
+    }
+    root.querySelector("[data-out]").textContent = msg;
+  }
+  ["a", "b", "r", "m"].forEach(function (k) { inp(k).addEventListener("input", update); });
+  root.querySelector(".widget-reset").addEventListener("click", function (e) {
+    e.stopPropagation();
+    ["a", "b", "r", "m"].forEach(function (k) { inp(k).value = DEF[k]; });
+    update();
+  });
+  update();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">VERDUN, 1916</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In February 1916 the German commander, Erich von Falkenhayn, attacked the French fortress city of Verdun. He later claimed that he wanted to &ldquo;bleed France white.&rdquo; Verdun mattered to French pride, so he expected France to defend it at any cost. The attack began on February 21 with a huge <span class="gloss" tabindex="0"><strong>bombardment</strong><button class="gloss-audio" onclick="speakGloss(event,'bom-BARD-munt')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">bom-BARD-munt</span>A long, heavy attack with artillery. <a class="om-maplink" href="#gloss-bombardment">See the glossary box.</a></span></span>. German troops soon captured Fort Douaumont, a key fort that was almost undefended.</p>
@@ -360,10 +451,32 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">On July 1 the British infantry climbed out of their trenches and walked toward the German lines. Machine guns met them. The British army suffered about 57,000 casualties that day, nearly 20,000 of them killed. It remains the bloodiest day in the history of the British army. Whole battalions of friends who had enlisted together, called &ldquo;Pals&rdquo; battalions, were nearly wiped out in minutes.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The battle went on until November. British, French, and German losses together passed one million men. The Allies gained only about six miles. In September the British used the first tanks, but there were too few, and they broke down too often to change the result.</p>
     </div>
+<div class="optima-widget ow-select" id="w19-2-b">
+        <div class="widget-kicker">TWO BATTLES, TWO PLANS</div>
+        <div class="widget-question">Compare the thinking behind Verdun and the Somme.</div>
+        <div class="widget-row" data-correct="0" data-hint="Remember his own words about France.">
+            <div class="widget-row-prompt">Falkenhayn expected France to defend Verdun at any cost. Which idea does that expectation show?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. He wanted to bleed France white by forcing it to fight for a place it could not abandon.">Attrition: make the enemy hold a place he cannot give up, and wear him down</button><button data-choice="1" data-fb="Fort Douaumont was almost undefended, but the plan's aim was to make France hold on at any cost, not to surprise it.">Surprise: strike where the enemy is not looking</button><button data-choice="2" data-fb="He wanted the opposite. Making France fight on one spot is a way to wear it down, not to break through.">Breakthrough: tear a hole and pour through</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Ask what the shelling was supposed to make possible.">
+            <div class="widget-row-prompt">Haig hoped a week of shelling would clear the German wire and dugouts. What did that hope assume?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The plan assumed the German line could be broken, not that it would be abandoned.">That the Germans would give up their trenches before the attack</button><button data-choice="1" data-fb="That is attrition. Haig's plan hoped for a break in the line, which is a different idea.">That wearing the enemy down was the only way to win</button><button data-choice="2" data-fb="Right. The shelling was meant to make a breakthrough possible. But many shells did not explode, and the Germans waited in deep shelters.">That enough firepower could break the line and open the way to advance</button></div>
+        </div><div class="widget-row" data-correct="1" data-hint="Compare the losses with the ground that changed hands.">
+            <div class="widget-row-prompt">What did the two battles have to show for their enormous cost?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Neither did. The front hardly moved at Verdun, and the Allies gained only about six miles on the Somme.">Each side won a clear victory and broke the other's line</button><button data-choice="1" data-fb="Right. Verdun cost roughly 700,000 men and the Somme more than a million, and the map hardly changed.">Very little change on the map: the front hardly moved at Verdun, and the Allies gained about six miles on the Somme</button><button data-choice="2" data-fb="The French line held at Verdun, and the Allies gained only about six miles on the Somme.">Germany took Verdun, and Britain took the Somme</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WHAT KEPT THEM GOING?</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Why did the armies not break, and why did the nations not quit? This war was fought largely by citizens, not only by professionals. Men had enlisted out of love of country and loyalty to friends, and courage in the trenches was real and often silent. But courage alone does not explain it. Governments controlled the news, and leaders feared the political price of stopping.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The philosopher Hegel called war the test of a state&rsquo;s health. By 1917 that test would break some states and harden others. The next lessons ask which nations held together under the strain, and why.</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">WHOSE CHOICE MATTERED MOST?</div>
+        <div class="widget-question">Three commanders made choices in 1916 that cost enormous numbers of men. Pick one and think about it. There is no single right answer.</div>
+        <div class="widget-options"><button data-response="He later said he wanted to bleed France white, and he expected France to defend Verdun at any cost. France held on, and about 700,000 men on both sides were killed, wounded, or missing. Judge his choice by what it cost both nations, and by whether the front moved.">Falkenhayn's choice to attack Verdun</button><button data-response="He organized the Sacred Way, rotated divisions so that most of the French army served at Verdun, and relied on artillery to protect his infantry. The line held, and he became a hero. Notice that the cost was terrible even so, and the front hardly moved.">P&eacute;tain's defense of Verdun</button><button data-response="Haig planned a week of shelling to destroy the wire and dugouts, but many shells did not explode and German soldiers waited in deep shelters. The British suffered about 57,000 casualties on the first day, and the Allies gained only about six miles by November. Ask whether another plan could have done better, given what he knew.">Haig's plan for July 1 on the Somme</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
@@ -402,6 +515,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

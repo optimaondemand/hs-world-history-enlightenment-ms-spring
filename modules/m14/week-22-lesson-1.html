@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -306,6 +331,68 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">By the autumn of 1918 Germany&rsquo;s army was being pushed back, and its allies were collapsing. In late September the German commander, Erich Ludendorff, told the government to ask for peace. Germany asked President Wilson for an <span class="gloss" tabindex="0"><strong>armistice</strong><button class="gloss-audio" onclick="speakGloss(event,'AR-muh-stis')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">AR-muh-stis</span>An agreement to stop fighting. It is not yet a peace treaty. <a class="om-maplink" href="#gloss-armistice">See the glossary box.</a></span></span> based on his Fourteen Points. Revolution broke out at home. The Kaiser gave up his throne on November 9 and fled to the Netherlands. Two days later, at five in the morning, German delegates signed an armistice in a railway car in a forest at Compi&egrave;gne. The guns stopped at eleven. The Allies had accepted Wilson&rsquo;s Fourteen Points as the basis for peace, with two reservations. One concerned freedom of the seas, which Britain would not accept. The other concerned payment for damage to civilians.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">About nine million soldiers had died. Whole regions of northern France and Belgium lay in ruins. But one fact would matter later. German soldiers still stood on foreign soil, and no Allied army had marched into Germany. Many Germans came to believe that their army had not truly been beaten. That belief would be used by enemies of the new German republic.</p>
     </div>
+<div class="optima-widget" id="w22-1-seq">
+<div class="widget-kicker">PUT IT IN ORDER</div>
+<div class="widget-question">The war ended through a chain of events in a few weeks. Rebuild the chain.</div>
+<div style="font-size:13px; color:#1B6A94; margin-bottom:8px; line-height:1.4;">Tap the events in the order they happened. Tap a placed event to take it back.</div>
+<div data-pool style="display:flex; flex-direction:column; gap:8px; margin-bottom:12px;"></div>
+<div style="font-size:11px; color:#1B6A94; letter-spacing:0.4px; margin-bottom:6px;">YOUR ORDER</div>
+<ol data-list style="margin:0 0 8px 0; padding-left:26px; min-height:24px;"></ol>
+<div data-out style="background:#FFFFFF; border-left:3px solid #C7922C; padding:10px 14px; font-size:15px; color:#1a2340; line-height:1.55; margin:12px 0; border-radius:4px;"></div>
+<button class="widget-reset" type="button">Reset</button>
+</div>
+<script>
+(function () {
+  var root = document.getElementById("w22-1-seq");
+  var events = ["Ludendorff tells the German government to ask for peace.", "Germany asks Wilson for an armistice based on the Fourteen Points.", "Revolution breaks out in Germany.", "The Kaiser gives up his throne and flees to the Netherlands.", "German delegates sign the armistice in a railway car at Compiegne.", "The guns fall silent at eleven that morning."];
+  var order = [4, 2, 0, 5, 1, 3];
+  var placed = [];
+  var pool = root.querySelector("[data-pool]");
+  var list = root.querySelector("[data-list]");
+  var out = root.querySelector("[data-out]");
+  var CHIP = "text-align:left; background:#FFFFFF; border:1.5px solid #D0D9E8; border-radius:8px; padding:9px 12px; font-size:14px; color:#0E1C42; cursor:pointer; font-family:inherit; line-height:1.45;";
+  function draw() {
+    pool.innerHTML = "";
+    list.innerHTML = "";
+    order.forEach(function (i) {
+      if (placed.indexOf(i) === -1) {
+        var b = document.createElement("button");
+        b.type = "button";
+        b.style.cssText = CHIP;
+        b.textContent = events[i];
+        b.addEventListener("click", function () { placed.push(i); draw(); });
+        pool.appendChild(b);
+      }
+    });
+    var full = placed.length === events.length;
+    var right = 0;
+    placed.forEach(function (i, pos) {
+      var li = document.createElement("li");
+      li.style.cssText = "margin-bottom:6px;";
+      var b = document.createElement("button");
+      b.type = "button";
+      b.style.cssText = CHIP + " width:100%;";
+      b.textContent = events[i];
+      if (full) {
+        if (i === pos) { right++; b.style.background = "#D8F0DD"; b.style.borderColor = "#2A9D5C"; }
+        else { b.style.background = "#FDECEC"; b.style.borderColor = "#C0392B"; }
+      }
+      b.addEventListener("click", function () { placed.splice(placed.indexOf(i), 1); draw(); });
+      li.appendChild(b);
+      list.appendChild(li);
+    });
+    if (!full) {
+      out.textContent = placed.length + " of " + events.length + " placed. Ask of each event: what had to happen before it could?";
+    } else if (right === events.length) {
+      out.textContent = "Right. Notice that the army's own commander began the chain by asking for peace. Defeat arrived in steps, and the last step was only the signing.";
+    } else {
+      out.textContent = right + " of " + events.length + " are in the right place. " + "Look for the event that had to come first. Who asked for peace before anyone signed anything?";
+    }
+  }
+  root.querySelector(".widget-reset").addEventListener("click", function (e) { e.stopPropagation(); placed = []; draw(); });
+  draw();
+})();
+</script>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE BIG FOUR</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The peace conference opened in Paris in January 1919. Delegates came from more than two dozen nations. Germany and the other defeated powers were not invited. Neither was <span class="gloss" tabindex="0"><em>Bolshevik</em><button class="gloss-audio" onclick="speakGloss(event,'BOHL-shuh-vik')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">BOHL-shuh-vik</span>A member of Lenin&rsquo;s party. The Russian word means &lsquo;one of the majority.&rsquo; <a class="om-maplink" href="#gloss-bolshevik">See the glossary box.</a></span></span> Russia. The Allies feared communism, and in March 1919 a short-lived <span class="gloss" tabindex="0"><em>soviet</em><button class="gloss-audio" onclick="speakGloss(event,'SOH-vee-et')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SOH-vee-et</span>The Russian word for council. In 1917 soviets were councils of workers, soldiers, or peasants. <a class="om-maplink" href="#gloss-soviet">See the glossary box.</a></span></span> republic took power in Hungary. That fear shaped their decisions. In practice, four men did most of the work: Wilson of the United States, Georges Clemenceau of France, David Lloyd George of Britain, and Vittorio Orlando of Italy.</p>
@@ -335,6 +422,24 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">At the conference he stood between Clemenceau, who wanted a harsh peace, and Wilson, who wanted an idealistic one. He wanted Germany to pay and lose its fleet and its colonies, but he feared a Germany pushed too far. In March 1919 he warned his colleagues that a Germany that felt unjustly treated would look for revenge. He later helped to soften some terms, but the treaty remained heavy.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">He remained a leading figure in Britain until 1922.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w22-1-a">
+        <div class="widget-kicker">WHO IS SPEAKING?</div>
+        <div class="widget-question">Each line is something one of the Big Four might have said. Who is it?</div>
+        <div class="widget-row" data-correct="2" data-hint="Which man brought the Fourteen Points?">
+            <div class="widget-row-prompt">&ldquo;We need a new kind of peace, and a League of Nations to keep order in the world.&rdquo;</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Orlando wanted the lands Italy had been promised for entering the war.">Orlando</button><button data-choice="1" data-fb="Lloyd George wanted to protect Britain's navy, empire, and trade.">Lloyd George</button><button data-choice="2" data-fb="Right. Wilson wanted a new kind of peace based on his Fourteen Points.">Wilson</button><button data-choice="3" data-fb="Clemenceau wanted safety for France.">Clemenceau</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Think about who worried about a navy and an empire.">
+            <div class="widget-row-prompt">&ldquo;Protect our navy, our empire, and our trade. I have promises to keep from my election.&rdquo;</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. He had won an election in December 1918 on a mood of anger at Germany.">Lloyd George</button><button data-choice="1" data-fb="Orlando wanted the lands Italy had been promised.">Orlando</button><button data-choice="2" data-fb="Clemenceau's first concern was the safety of France.">Clemenceau</button><button data-choice="3" data-fb="Wilson spoke of a League of Nations and a new kind of peace.">Wilson</button></div>
+        </div><div class="widget-row" data-correct="3" data-hint="Think about which country wanted land.">
+            <div class="widget-row-prompt">&ldquo;My country entered the war for lands we were promised.&rdquo;</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Clemenceau wanted safety, not new lands.">Clemenceau</button><button data-choice="1" data-fb="Wilson wanted a League of Nations, not lands.">Wilson</button><button data-choice="2" data-fb="Lloyd George wanted to protect the navy, the empire, and trade.">Lloyd George</button><button data-choice="3" data-fb="Right. Orlando wanted the lands that Italy had been promised for entering the war.">Orlando</button></div>
+        </div><div class="widget-row" data-correct="1" data-hint="Which leader's country had been invaded?">
+            <div class="widget-row-prompt">&ldquo;Germany has invaded my country twice in my lifetime. I want France safe.&rdquo;</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Wilson wanted a League of Nations, not the French frontier.">Wilson</button><button data-choice="1" data-fb="Right. France had lost almost one and a half million men, and he wanted Germany too weak to attack again.">Clemenceau</button><button data-choice="2" data-fb="Orlando wanted the lands that Italy had been promised.">Orlando</button><button data-choice="3" data-fb="Lloyd George wanted to protect Britain's navy, empire, and trade.">Lloyd George</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WHAT THE TREATY SAID</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The Treaty of Versailles was signed on June 28, 1919, in the Hall of Mirrors at the palace of Versailles. Its terms were heavy. Germany returned Alsace and Lorraine to France. It gave up land to Belgium and Denmark and gave much of its eastern territory to a restored Poland. It lost all its overseas colonies. Its army was limited to 100,000 men, with no tanks, no military aircraft, and no submarines. Its western territory along the Rhine was to be <span class="gloss" tabindex="0"><strong>demilitarized</strong><button class="gloss-audio" onclick="speakGloss(event,'dee-MIL-ih-tuh-ryz')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">dee-MIL-ih-tuh-ryz</span>To remove soldiers and fortresses from an area, and to forbid their return. <a class="om-maplink" href="#gloss-demilitarize">See the glossary box.</a></span></span>. Allied troops would occupy parts of the Rhineland for fifteen years. The coal-rich Saar region was placed under League control, with its coal going to France. Union with Austria was forbidden. In all, Germany lost about a tenth of its people and an eighth of its land in Europe.</p>
@@ -346,6 +451,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="display:flex;flex-wrap:wrap;align-items:flex-start;"><div style="flex:1 1 260px;min-width:240px;"><div style="font-size:17px;color:#0E1C42;font-weight:600;">Versailles<button class="gloss-audio" onclick="speakGloss(event,'Versailles')" aria-label="Play pronunciation">&#128266;</button></div><p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Versailles lies about twelve miles southwest of Paris. Louis XIV, the Sun King, turned it from a hunting lodge into the grandest palace in Europe in the later 1600s. Its Hall of Mirrors is a long gallery lined with huge windows and mirrors.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">In January 1871, as the Germans besieged Paris, Prussia&rsquo;s king was proclaimed German Emperor in this hall. For France it was a deep humiliation. In 1919 the French insisted that the peace treaty be signed in the same hall, on June 28, five years to the day after the assassination at Sarajevo. The setting was a deliberate reply to 1871. Many Germans saw it as an insult.</p></div></div>
     </div></div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">SEEN FROM BERLIN</div>
+        <div class="widget-question">You are a German delegate reading the terms in May. What stands out to you first?</div>
+        <div class="widget-options"><button data-response="Germany and the other defeated powers were not invited to the conference. Many Germans called the treaty a dictated peace.">We were not allowed to negotiate</button><button data-response="Article 231 said that Germany and its allies were responsible for all the loss and damage of the war, and on that basis Germany had to pay reparations. In 1921 the total was set at 132 billion gold marks.">The war guilt clause</button><button data-response="Germany lost about a tenth of its people and an eighth of its land in Europe. Millions of Germans, Hungarians, and others found themselves in foreign states, because borders cannot be drawn to match peoples perfectly.">The loss of land and people</button><button data-response="The army was limited to 100,000 men, with no tanks, no military aircraft, and no submarines, and the Rhineland was to be demilitarized, with Allied troops occupying parts of it for fifteen years.">The limits on our army</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">SIGNED UNDER A THREAT</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Germany had not been allowed to negotiate. When German leaders saw the terms in May, they were outraged. Many Germans called the treaty a <span class="gloss" tabindex="0"><em>Diktat</em><button class="gloss-audio" onclick="speakGloss(event,'DIK-taht')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">DIK-taht</span>A German word for a settlement dictated to the loser without real negotiation. Germans used it as a name for the Treaty of Versailles. <a class="om-maplink" href="#gloss-diktat">See the glossary box.</a></span></span>, a dictated peace. The chancellor, Philipp Scheidemann, asked whether any hand would not wither that signed it, and his government resigned rather than sign. The Allies warned that they would resume the war. On June 21 German sailors at Scapa Flow sank their own fleet, which had been held in British hands. A new government gave way, and two German ministers signed.</p>
@@ -359,6 +471,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <span class="gloss-pron" style="font-size:13px;">DIK-taht</span>
         <div style="font-size:14px; color:#1a2340; line-height:1.5;">A German word for a settlement dictated to the loser without real negotiation. Germans used it as a name for the Treaty of Versailles.</div>
     </div>
+    </div>
+<div class="optima-widget ow-select" id="w22-1-b">
+        <div class="widget-kicker">CHECK YOUR UNDERSTANDING</div>
+        <div class="widget-question">Use what you read about the treaty and its aftermath.</div>
+        <div class="widget-row" data-correct="1" data-hint="Look for what Germany still had after the treaty.">
+            <div class="widget-row-prompt">Which fact best supports the claim that the treaty left Germany angry but still strong?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="That shows where it was signed, not how strong Germany was.">German delegates signed in the Hall of Mirrors</button><button data-choice="1" data-fb="Right. The treaty hurt Germany, but it left its people and its industry in place.">Germany still had more than sixty million people, against France's forty million, and its factories and coalfields were largely intact</button><button data-choice="2" data-fb="That shows the treaty was harsh. The claim is about what Germany kept.">Germany lost all its overseas colonies</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Where were the armies when the guns stopped?">
+            <div class="widget-row-prompt">Many Germans believed their army had not truly been beaten. Which fact from the lesson helped that belief?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. That belief would later be used by enemies of the new German republic.">German soldiers still stood on foreign soil, and no Allied army had marched into Germany</button><button data-choice="1" data-fb="That was the basis for the armistice. It does not explain why the army seemed unbeaten.">The Allies accepted the Fourteen Points as a basis for peace</button><button data-choice="2" data-fb="That fed resentment, but it is not about the army.">Germany was not invited to the peace conference</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
@@ -396,6 +520,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>
