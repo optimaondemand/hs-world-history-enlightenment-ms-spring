@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -294,6 +319,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">By the spring of 1945 Japan had lost most of its navy and many of its islands. From bases in the Marianas, American bombers struck Japanese cities. On the night of March 9 and 10, a fire raid on Tokyo burned much of the city and killed about 100,000 people. Japan&rsquo;s leaders did not give in. The fighting for Iwo Jima in February and March cost nearly 7,000 American lives. On Okinawa, which began on April 1, about 12,500 Americans died. More than 100,000 Japanese soldiers died there as well, and so did a very large number of Okinawan civilians.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The next step was to invade the home islands. Plans called for a landing on the southern island of Kyushu in November 1945, and another near Tokyo in the spring. The Japanese army moved its best units to the beaches and trained boys and women to fight with sharpened bamboo and old rifles. Estimates of how many Americans would die in an invasion varied widely, and they are still argued over. No one doubted that the cost would be very high, for Americans, and also for the Japanese who would defend their homeland.</p>
     </div>
+<div class="optima-widget ow-select" id="w31-1-a">
+        <div class="widget-kicker">THE SHRINKING RING</div>
+        <div class="widget-question">Use what you read about the spring of 1945.</div>
+        <div class="widget-row" data-correct="1" data-hint="Think about what the earlier battles showed about how Japan's leaders and soldiers acted.">
+            <div class="widget-row-prompt">On Okinawa about 12,500 Americans died, and more than 100,000 Japanese soldiers. What does the lesson let you infer about an invasion of the home islands?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson says Japan's leaders did not give in. Reread what it says about Iwo Jima and Okinawa.">Japan was nearly ready to give in, so an invasion would be easy</button><button data-choice="1" data-fb="Right. No one doubted the cost would be very high, for Americans and for the Japanese defenders. The estimates are argued over, but not that.">Fighting on Japanese soil would probably cost very large numbers on both sides</button><button data-choice="2" data-fb="The loss of the navy did not end the fighting. The army moved its best units to the beaches.">There would be little resistance, since the navy was gone</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Notice what the lesson says people disagreed about, and what they did not.">
+            <div class="widget-row-prompt">Estimates of how many Americans would die in an invasion varied widely. Which statement does the lesson support?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson says the estimates varied and are still argued over.">The estimates were exact, so the choice was easy</button><button data-choice="1" data-fb="The lesson says no one doubted the cost would be very high.">Most officials expected an invasion to cost few lives</button><button data-choice="2" data-fb="Right. A leader has to choose before the count is known, and here even the estimates did not agree.">No one knew the exact number, but everyone expected the cost to be high</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE BOMB</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In 1938 German scientists discovered that the atom of uranium could be split. The splitting, called <span class="gloss" tabindex="0"><strong>fission</strong><button class="gloss-audio" onclick="speakGloss(event,'FISH-un')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">FISH-un</span>The splitting of the center of an atom, which gives off a great burst of energy. <a class="om-maplink" href="#gloss-fission">See the glossary box.</a></span></span>, gives off an enormous amount of energy. In August 1939 two refugee physicists, Leo Szilard and Albert Einstein, warned Roosevelt in a letter that Germany might build a bomb from this discovery. The United States began a secret program in 1942 called the Manhattan Project. General Leslie Groves ran it, and the physicist J. Robert Oppenheimer led the laboratory at Los Alamos, New Mexico. It cost about two billion dollars, and it employed more than 100,000 people, most of whom did not know what they were building.</p>
@@ -323,6 +360,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:14px; color:#1a2340; line-height:1.5;">A Japanese word that can mean to ignore or to treat with silence, or to withhold comment. Its sense in Japan&rsquo;s answer to the Potsdam Declaration is still debated.</div>
     </div>
     </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">WHAT WOULD YOU WANT TO KNOW?</div>
+        <div class="widget-question">You are Truman in June 1945 and the bomb is nearly ready. Which question would you most want answered?</div>
+        <div class="widget-options"><button data-response="The lesson says the estimates varied widely and are still argued over. That doubt is part of why the choice was hard. A leader must act on estimates, not on the final count.">How much would an invasion really cost?</button><button data-response="Some believed so, since Stalin had promised at Yalta to attack three months after Germany fell. The lesson gives this as one view among several, and no one could test it before choosing.">Would Japan give in if the Soviets joined the war?</button><button data-response="Some scientists asked for exactly that. The lesson does not say what would have happened, and neither side of the argument can show it. You must weigh one guess against another.">Would a demonstration on an empty island persuade Japan's leaders?</button><button data-response="Some officials urged a change in the terms to let Japan keep its emperor. The Potsdam Declaration did not say what would become of him. Later the Allies did let him stay, under the Supreme Commander.">Would keeping the emperor change Japan's answer?</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">HIROSHIMA AND NAGASAKI</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">At 8:15 on the morning of August 6, an American B-29 named the Enola Gay dropped a uranium bomb on Hiroshima, a city of about 350,000 that held an army headquarters. About 70,000 to 80,000 people died at once. By the end of the year, from burns and <span class="gloss" tabindex="0"><strong>radiation</strong><button class="gloss-audio" onclick="speakGloss(event,'ray-dee-AY-shun')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">ray-dee-AY-shun</span>Invisible energy given off by an atomic explosion, which can cause sickness, cancer, and death. <a class="om-maplink" href="#gloss-radiation">See the glossary box.</a></span></span> sickness, the number was about 140,000. On August 8 the Soviet Union declared war on Japan, and on August 9 its armies poured into Manchuria. That same day an American plane dropped a plutonium bomb on Nagasaki. About 40,000 people died at once, and about 70,000 by the end of the year.</p>
@@ -331,9 +375,28 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE SURRENDER</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Even now Japan&rsquo;s Supreme Council split three against three. Some leaders would accept the Potsdam terms if the emperor kept his place, and others wanted to fight on. On the night of August 9 and 10, Emperor <span class="gloss" tabindex="0"><strong>Hirohito</strong><button class="gloss-audio" onclick="speakGloss(event,'heer-oh-HEE-toh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">heer-oh-HEE-toh</span>Hirohito was the emperor of Japan from 1926 to 1989, whose intervention in August 1945 brought the war to an end. <a class="om-maplink" href="#fig-31-3-hirohito">Read more below.</a></span></span> broke the tie, and he told the council to &ldquo;bear the unbearable.&rdquo; The Allies replied that the emperor would be under the authority of the Supreme Commander in Japan. After another debate, the emperor ruled again for surrender. On August 15 the Japanese people heard his voice on the radio for the first time. A group of officers had tried to seize the recording the night before, but they failed. The formal surrender was signed on September 2 on the battleship Missouri in Tokyo Bay.</p>
     </div>
+<div class="optima-widget ow-select" id="w31-1-b">
+        <div class="widget-kicker">HOW THE WAR ENDED</div>
+        <div class="widget-question">Use what you read about the days from August 6 to August 15.</div>
+        <div class="widget-row" data-correct="0" data-hint="Count the votes the lesson gives, and ask who broke the tie.">
+            <div class="widget-row-prompt">Even after Nagasaki, Japan's Supreme Council split three against three. What does that show?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. The council could not decide, and Hirohito stepped outside custom to break the deadlock.">The bombs did not by themselves produce a clear decision, and the emperor had to break the tie</button><button data-choice="1" data-fb="The lesson says the council was split, with some leaders wanting to fight on.">Every Japanese leader wanted to give in at once</button><button data-choice="2" data-fb="The council debated and divided. The emperor broke the tie, which is not the same as having no council.">The council had no part in the decision</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Ask whether you can pull two events apart when they happened days apart.">
+            <div class="widget-row-prompt">The Soviet Union declared war on Japan on August 8, between the two bombs. What does that do to the argument over why Japan gave in?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The Soviet entry came within days of the bombs, so the bombs cannot be separated from it so easily.">It settles it: the bombs alone caused the surrender</button><button data-choice="1" data-fb="The Soviet entry came right between two bombs, so it cannot be separated from them either.">It settles it: the Soviet entry alone caused the surrender</button><button data-choice="2" data-fb="Right. Historians argue over this because two great shocks arrived almost together.">It makes it harder to say which event mattered most, since both came within days</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE ARGUMENT</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Historians have given two main answers. Some say that the bombs ended the war quickly, saved the lives of many Americans and Japanese who would have died in an invasion, and saved the many people dying each week across Asia under Japanese rule. Others say that Japan was close to collapse, that the Soviet entry or a promise about the emperor might have been enough, and that killing so many civilians on purpose was wrong. Each side must guess what would have happened if the bomb had not been used, and no one can know. Notice that your answer depends on two things: the facts, and the moral rules you think apply to a commander. Start a two-column list in your notebook and finish it in the next lesson.</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">YOUR LEAN SO FAR</div>
+        <div class="widget-question">As you begin your two-column list, which belief do you lean on most?</div>
+        <div class="widget-options"><button data-response="That is the first side's claim. It rests on a guess about a war that never took place, and the lesson says the estimates are argued over.">An invasion would have cost more lives than the bombs</button><button data-response="That is the second side's claim. It also rests on a guess: that the Soviet entry or a promise about the emperor would have been enough.">Japan was close to collapse without the bombs</button><button data-response="This answer rests on a moral rule more than on facts. The lesson says your answer depends on both the facts and the moral rules you think apply to a commander.">Killing civilians on purpose is wrong whatever the result</button><button data-response="That is an honest place to stand. Your two columns are for this, and you will finish them in the next lesson.">I cannot say yet and want to read the sources first</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div id="fig-31-3-hirohito"><div style="background: #FDF3E3; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128100; HISTORICAL FIGURE</div>
@@ -376,6 +439,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

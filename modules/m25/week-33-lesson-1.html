@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -343,6 +368,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="display:flex;flex-wrap:wrap;align-items:flex-start;"><div style="flex:1 1 260px;min-width:240px;"><div style="font-size:17px;color:#0E1C42;font-weight:600;">Chiang Kai-shek<button class="gloss-audio" onclick="speakGloss(event,'CHAHNG KY-SHEK')" aria-label="Play pronunciation">&#128266;</button></div><span class="gloss-pron" style="font-size:13px;display:block;margin-bottom:8px;">CHAHNG KY-SHEK</span><p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Chiang Kai-shek (1887 to 1975) trained as a soldier in Japan and rose to lead the Kuomintang after the death of its founder, Sun Yat-sen. In the late 1920s he united much of China under one government and drove the Communists from their bases. Later, during the war with Japan, his armies held out for eight years, at a cost of millions of lives.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">After the Second World War his government was weakened by inflation, corruption, and the loss of the peasants&rsquo; trust. In 1949 he fled to Taiwan, where he ruled as president until his death. He kept the claim that his government was the true government of all China, and the United States defended that claim for decades.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w33-1-a">
+        <div class="widget-kicker">CHINA</div>
+        <div class="widget-question">Use what you read about the civil war in China.</div>
+        <div class="widget-row" data-correct="2" data-hint="Ask what the lesson says about Chiang's government and about the countryside.">
+            <div class="widget-row-prompt">Most historians say that America never had the power to decide the Chinese civil war. What reasons does the lesson give for Chiang's defeat?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson does not say that. Look at what happened to Chiang's government and his armies.">Truman refused to send any aid</button><button data-choice="1" data-fb="The lesson does not say so. Look at how the Communists won support.">The Soviet army fought on Mao's side</button><button data-choice="2" data-fb="Right. Chiang lost it mainly through his own failures.">Corruption, runaway prices, and the loss of the peasants to Communist promises of land</button></div>
+        </div><div class="widget-row" data-correct="1" data-hint="Look for the word the lesson uses for countries like Poland.">
+            <div class="widget-row-prompt">Mao signed a treaty with Stalin in 1950, yet the lesson says China was never a satellite like Poland. What does it say about Mao?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="That is how a satellite state behaves, and the lesson says China was not one.">He took orders from Moscow</button><button data-choice="1" data-fb="Right. A treaty is not the same as control.">He answered to himself, and the two Communist powers would quarrel within ten years</button><button data-choice="2" data-fb="The lesson says the Communists held the northern countryside and won the war.">He had no army of his own</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">KOREA: THE FIRST HOT WAR</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Korea had been a Japanese colony. In 1945 American and Soviet officers agreed to divide it at the 38th parallel so that each could accept the Japanese surrender in its half. The line was meant to be temporary. By 1948 it had become a border between two governments: the Republic of Korea in the south, under Syngman Rhee, and the Communist North, under Kim Il Sung. Each claimed the whole country.</p>
@@ -355,6 +392,13 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="display:flex;flex-wrap:wrap;align-items:flex-start;"><div style="flex:1 1 260px;min-width:240px;"><div style="font-size:17px;color:#0E1C42;font-weight:600;">Douglas MacArthur<button class="gloss-audio" onclick="speakGloss(event,'DUG-lus mak-AR-thur')" aria-label="Play pronunciation">&#128266;</button></div><span class="gloss-pron" style="font-size:13px;display:block;margin-bottom:8px;">DUG-lus mak-AR-thur</span><p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">Douglas MacArthur (1880 to 1964) graduated first in his class at West Point and became a general in the First World War. In the Second World War he commanded in the Pacific, and in 1945 he accepted the Japanese surrender. As the ruler of occupied Japan he helped to build a democratic government there.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">His landing at Inchon in 1950 was a bold stroke that many officers thought would fail. It succeeded, but he then misjudged China&rsquo;s reaction and clashed with Truman over the aims of the war. Truman dismissed him on April 11, 1951. MacArthur was proud and gifted, and his ambition and certainty brought both his greatest success and his fall.</p></div></div>
     </div></div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">KOREA: A CHANGE OF AIM</div>
+        <div class="widget-question">After Inchon, the United Nations force drove north to the Yalu instead of restoring the old border. How would you describe that choice?</div>
+        <div class="widget-options"><button data-response="The aim changed from restoring the border to driving north. Mao had warned that he would not accept an enemy army on his border, and the warning was ignored. A victory can tempt a commander to reach too far.">A success that went too far</button><button data-response="Some may have seen it so. The lesson says hundreds of thousands of Chinese soldiers crossed in November 1950 and drove the army back south of Seoul. A chance can be good and the risk still be misjudged.">A reasonable chance to end the division of Korea</button><button data-response="The warning was ignored. The lesson does not say how much was known in Washington or Tokyo, so you can say what should have been weighed, though not what was known.">A decision that gave too little weight to China's warning</button><button data-response="That is fair. The lesson gives the facts and not each decision-maker's reasons. For your chart, state the choice and what might have changed it.">I cannot tell from the lesson</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">VIETNAM: FROM THE FRENCH TO THE AMERICANS</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In September 1945 <span class="gloss" tabindex="0"><strong>Ho Chi Minh</strong><button class="gloss-audio" onclick="speakGloss(event,'HOH CHEE MIN')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">HOH CHEE MIN</span>Ho Chi Minh was the Communist who led Vietnam&rsquo;s fight for independence from France and ruled North Vietnam. <a class="om-maplink" href="#fig-33-3-ho">Read more below.</a></span></span> declared Vietnam independent. France refused to give up its colony, and in 1946 war began between French forces and the <span class="gloss" tabindex="0"><em>Viet Minh</em><button class="gloss-audio" onclick="speakGloss(event,'vee-ET MIN')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">vee-ET MIN</span>The Vietnamese independence league, led by Communists under Ho Chi Minh, that fought the French from 1946 to 1954. <a class="om-maplink" href="#gloss-viet-minh">See the glossary box.</a></span></span>. The Viet Minh fought as <span class="gloss" tabindex="0"><strong>guerrillas</strong><button class="gloss-audio" onclick="speakGloss(event,'guh-RIL-uh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">guh-RIL-uh</span>A fighter who works in small bands, using ambush and surprise against a stronger army. <a class="om-maplink" href="#gloss-guerrilla">See the glossary box.</a></span></span>, hiding among the people and striking by night, and they were led in the field by the general Vo Nguyen Giap. After 1949 they received arms from Communist China. The United States saw the war as part of the contest with communism, and by 1954 it was paying most of France&rsquo;s costs.</p>
@@ -372,9 +416,28 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="display:flex;flex-wrap:wrap;align-items:flex-start;"><div style="flex:1 1 260px;min-width:240px;"><div style="font-size:17px;color:#0E1C42;font-weight:600;">Dien Bien Phu<button class="gloss-audio" onclick="speakGloss(event,'Dien Bien Phu')" aria-label="Play pronunciation">&#128266;</button></div><p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">The French chose the valley as a base to draw the Viet Minh into open battle, where French guns and planes would crush them. The valley was about ten miles long, ringed by hills, and supplied only by air. French commanders believed that the enemy could not bring heavy artillery over the mountains.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">General Giap brought thousands of laborers, who dragged guns apart and hauled them into the hills by hand. The siege began on March 13, 1954. The Viet Minh guns closed the airstrip, and the fortress was overrun on May 7 after weeks of trench warfare. About ten thousand French troops were taken prisoner. France soon left Vietnam.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w33-1-b">
+        <div class="widget-kicker">KOREA AND VIETNAM</div>
+        <div class="widget-question">Use what you read about how these two wars were fought and judged.</div>
+        <div class="widget-row" data-correct="0" data-hint="Ask what Truman was afraid of.">
+            <div class="widget-row-prompt">Truman did not use atomic weapons and did not attack Chinese soil in Korea. Why not?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. This is what made it a limited war.">He feared that the war would grow into a world war</button><button data-choice="1" data-fb="The lesson says Truman did not wait for Congress to act.">Congress had forbidden it</button><button data-choice="2" data-fb="MacArthur wanted to bomb China, and Truman removed him.">His generals all agreed with him</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Ask what the vote rested on.">
+            <div class="widget-row-prompt">Historians now think the second Tonkin Gulf attack never took place, yet Congress voted almost unanimously to let Johnson use force. What does that show?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="A vote built on an attack that never took place suggests the opposite.">Congress had checked every fact with care</button><button data-choice="1" data-fb="The vote was almost unanimous.">Johnson had little support</button><button data-choice="2" data-fb="Right. Large choices are often made on facts that cannot be checked in time.">A decision with large consequences rested on a report that later proved wrong</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">WHAT THE THREE WARS SHARE</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Look back over the three wars. In each, a Communist force fought a government backed by the West. In each, the United States feared that a loss would encourage others, and in each, great powers stayed out of direct combat with one another. Start a chart in your notebook with these columns: place, who started the fight, what each side wanted, and what choices could have changed the outcome. Fill it in for China, Korea, and Vietnam. In the next lesson you will add Cuba, where the superpowers came much nearer to a direct clash.</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">A CHOICE THAT COULD HAVE CHANGED IT</div>
+        <div class="widget-question">Pick one choice from the lesson. Which could have changed the outcome most?</div>
+        <div class="widget-options"><button data-response="Mao had warned, and the Chinese crossed the river. Without the drive north the fighting might have settled sooner, but the lesson does not say so. Give a reason of your own.">The decision to drive north to the Yalu</button><button data-response="France refused, and war began. A different French choice could have changed what followed. The lesson shows only that the refusal led to war, so ask what else it would have needed.">France giving up Vietnam in 1946</button><button data-response="They were never held. South Vietnam under Diem refused them, and the United States backed him. The lesson does not say how the vote would have gone, so your argument must rest on what you do know.">Holding the elections set for 1956</button><button data-response="He began regular bombing and sent combat troops, and by 1968 more than half a million Americans were in Vietnam. The lesson calls it a harder war than Korea, because the enemy melted into the villages.">Johnson sending combat troops in 1965</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
@@ -412,6 +475,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -316,10 +341,29 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The leaders met again at Potsdam, near Berlin, from July 17 to August 2. Roosevelt was dead, and Truman had taken his place. Churchill was voted out of office in the middle of the conference, and Clement Attlee took his seat. Germany had given up by <span class="gloss" tabindex="0"><strong>unconditional surrender</strong><button class="gloss-audio" onclick="speakGloss(event,'un-kun-DISH-un-ul suh-REN-der')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">un-kun-DISH-un-ul suh-REN-der</span>A surrender in which the defeated side gets no promises in return and accepts whatever terms the winner sets. <a class="om-maplink" href="#gloss-unconditional-surrender">See the glossary box.</a></span></span>, and there was no German government left to talk to. The three powers agreed to rule it together through a council of the four zone commanders, to disarm it, and to try its war criminals.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The quarrels were already sharp. The Soviets were stripping their zone of factories and railways as <span class="gloss" tabindex="0"><strong>reparations</strong><button class="gloss-audio" onclick="speakGloss(event,'rep-uh-RAY-shunz')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">rep-uh-RAY-shunz</span>Payments, or goods and labor, that a defeated nation must give to the winners to make up for war damage. <a class="om-maplink" href="#gloss-reparations">See the glossary box.</a></span></span>. Stalin put the new Polish border at the Oder and Neisse rivers, and about twelve million Germans were driven out of the lands in the east. Truman was more suspicious of Stalin than Roosevelt had been. He hinted to Stalin that the United States had a powerful new weapon, and Stalin showed little surprise. He had already learned of it through spies.</p>
     </div>
+<div class="optima-widget ow-select" id="w32-1-a">
+        <div class="widget-kicker">YALTA AND POTSDAM</div>
+        <div class="widget-question">Use what you read about the two conferences.</div>
+        <div class="widget-row" data-correct="0" data-hint="Count who was at Yalta, and who was at Potsdam.">
+            <div class="widget-row-prompt">At Potsdam, Roosevelt was dead and Churchill was voted out in the middle of the conference. What does that suggest about the men facing Stalin?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. Truman and Attlee were new, and Stalin had sat through the whole war. Deaths and elections changed who sat at the table.">Two of the three Western leaders were new to the table, while Stalin was the same man</button><button data-choice="1" data-fb="The lesson names three Western leaders over the two conferences. There was no single leader.">The Western side was united under one leader</button><button data-choice="2" data-fb="Stalin was at Yalta, and he was at Potsdam.">Stalin was new to the conference as well</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Ask what Stalin already knew when he heard the hint.">
+            <div class="widget-row-prompt">Truman hinted to Stalin that the United States had a powerful new weapon, and Stalin showed little surprise. What can you conclude?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson gives a different reason for his calm.">Stalin did not understand what Truman meant</button><button data-choice="1" data-fb="The lesson says he had already learned of it.">Stalin did not believe the weapon existed</button><button data-choice="2" data-fb="Right. A secret that the other side already holds is not much of a lever.">The Soviets had already learned of it through spies, so the hint gave Truman little advantage</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">STALIN'S EUROPE</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The Red Army stayed where it was, and local Communists, backed by Moscow, took over one government after another. In Poland the elections of 1947 were rigged. In Romania and Bulgaria Communist ministers took control of the police and the army and drove out their rivals. By 1948 these countries were <span class="gloss" tabindex="0"><strong>satellite states</strong><button class="gloss-audio" onclick="speakGloss(event,'SAT-uh-lyt STAYT')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SAT-uh-lyt STAYT</span>A country that is officially independent but is controlled by a stronger neighbor. <a class="om-maplink" href="#gloss-satellite-state">See the glossary box.</a></span></span>. Stalin had reasons of his own. His country had been invaded twice in a generation and had lost more than twenty million people. He wanted a belt of friendly countries on his western border. He was also a convinced Communist who saw a chance to spread his system, and historians still argue over how far each motive drove him.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">In March 1946, at Fulton, Missouri, Churchill told an American audience that &ldquo;from Stettin in the Baltic to Trieste in the Adriatic an iron curtain has descended across the Continent.&rdquo; The phrase, the <span class="gloss" tabindex="0"><strong>iron curtain</strong><button class="gloss-audio" onclick="speakGloss(event,'EYE-urn KUR-tun')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">EYE-urn KUR-tun</span>Churchill&rsquo;s name for the line that divided Soviet-controlled Eastern Europe from the free nations of the West. <a class="om-maplink" href="#gloss-iron-curtain">See the glossary box.</a></span></span>, stuck. Soviet troops also stayed in northern Iran until the spring of 1946, and Stalin pressed Turkey for control of the straits that lead from the Black Sea. Each of these moves alarmed Washington. The United States and the Soviet Union had become the two <span class="gloss" tabindex="0"><strong>superpowers</strong><button class="gloss-audio" onclick="speakGloss(event,'SOO-per-pow-er')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">SOO-per-pow-er</span>A nation so strong in arms and wealth that it can shape events around the world. <a class="om-maplink" href="#gloss-superpower">See the glossary box.</a></span></span>, and no one else was close to their strength.</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">STALIN'S MOTIVES</div>
+        <div class="widget-question">The lesson says historians still argue over how far each motive drove Stalin. Which do you think weighed most?</div>
+        <div class="widget-options"><button data-response="His country had been invaded twice in a generation and had lost more than twenty million people. A fear built on real losses is a strong motive. It does not by itself explain rigged elections.">A belt of friendly countries after two invasions</button><button data-response="The lesson calls him a convinced Communist who saw a chance to spread his system. That would fit Communists taking over the police and the army.">His belief in spreading his system</button><button data-response="Both led to the same step: keeping the Red Army's gains under friendly governments. When two motives agree, it is hard to say which one decided.">Both, and they pointed the same way</button><button data-response="That is fair, since historians still argue. You can still say which motive fits the facts better, and give a reason.">The lesson cannot tell me</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">KENNAN'S TELEGRAM</div>
@@ -331,11 +375,30 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="display:flex;flex-wrap:wrap;align-items:flex-start;"><div style="flex:1 1 260px;min-width:240px;"><div style="font-size:17px;color:#0E1C42;font-weight:600;">George Kennan<button class="gloss-audio" onclick="speakGloss(event,'JORJ KEN-un')" aria-label="Play pronunciation">&#128266;</button></div><span class="gloss-pron" style="font-size:13px;display:block;margin-bottom:8px;">JORJ KEN-un</span><p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">George Kennan (1904 to 2005) was born in Wisconsin and joined the diplomatic service as a young man. He studied Russian and served in Moscow when the American embassy first opened there in 1933. He knew the language and history of Russia better than almost any official in Washington.</p>
 <p style="font-size:15px; color:#1a2340; line-height:1.6; margin:0 0 10px 0;">His telegram of 1946 made his name, and in 1947 he became the head of the State Department&rsquo;s planning staff. Later he feared that his idea had been turned into a program of arms and alliances, when he had meant it to be mostly a contest of political and economic strength. He left government in the early 1950s and became a historian. He lived to be 101.</p></div></div>
     </div></div>
+<div class="optima-widget ow-select" id="w32-1-b">
+        <div class="widget-kicker">FROM KENNAN TO GREECE</div>
+        <div class="widget-question">Use what you read about Kennan's advice and the crisis in the eastern Mediterranean.</div>
+        <div class="widget-row" data-correct="1" data-hint="Ask who had been paying, and who was left.">
+            <div class="widget-row-prompt">In February 1947 Britain told Washington that it could no longer afford to support Greece and Turkey. What does that show?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson says Britain could not afford the cost. It does not say it thought the threat was gone.">Britain had decided the Soviets were no threat</button><button data-choice="1" data-fb="Right. The pressure fell on the one Western power still able to meet the cost.">Britain was too weak to hold up both countries, so the question passed to Washington</button><button data-choice="2" data-fb="The lesson says Greece was fighting a civil war and Turkey was under Soviet pressure.">Greece and Turkey no longer wanted help</button></div>
+        </div><div class="widget-row" data-correct="2" data-hint="Ask what the speech did to the Greek civil war.">
+            <div class="widget-row-prompt">Some critics said Truman overstated the case, because Stalin was not directing the Greek rebels. Why would that matter?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The civil war was real whoever directed it.">It would prove that Greece did not need help</button><button data-choice="1" data-fb="Greece held after Congress approved the money.">It would prove that the Truman Doctrine failed</button><button data-choice="2" data-fb="Right. The speech turned one country's war into a choice between two ways of life.">It would mean the speech blurred a local civil war into a contest with Moscow</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">GREECE, TURKEY, AND THE TRUMAN DOCTRINE</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The test came in the eastern Mediterranean. Greece was fighting a civil war against Communist guerrillas, and Turkey was under Soviet pressure. Britain had held both up with money and arms, but in February 1947 it told Washington that it could no longer afford to do so. On March 12 Truman went before Congress and asked for 400 million dollars for Greece and Turkey. He said that &ldquo;it must be the policy of the United States to support free peoples who are resisting attempted subjugation by armed minorities or by outside pressures.&rdquo; You will read his speech this week.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The speech put the quarrel in the plainest terms, as a choice between two ways of life. Congress approved the money, and Greece held. Some critics said that Truman overstated the case, because Stalin was not directing the Greek rebels. But the speech set the course of American policy. For the first time in its history the United States had promised, in time of peace, to help other nations resist pressure from a great power.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Start a chart in your notebook with three columns: Soviet actions, Western actions, and conditions neither side chose. List what you have read so far in each. Add to it in the next lesson.</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">WHICH STEP WAS HARDEST TO REVERSE?</div>
+        <div class="widget-question">This week asks who divided Europe. Based on this lesson alone, which step do you think was hardest to undo?</div>
+        <div class="widget-options"><button data-response="Armies in place were facts no letter could change. Defenders of Roosevelt say that the West held only a promise.">The Red Army staying where it stood in 1945</button><button data-response="Rigged elections in Poland, and Communists in control of the police and army in Romania and Bulgaria, made satellite states. They were hard to undo because the means of force were in Communist hands.">Communist takeovers backed from Moscow</button><button data-response="It set the course of American policy. A public promise is hard to take back, though the lesson does not say that it could not have been.">The promise to help others resist pressure</button><button data-response="Truman was more suspicious of Stalin than Roosevelt had been, and Stalin had fears of his own. Each Soviet move alarmed Washington. Distrust is hard to measure, but it shaped how each step was read.">The distrust each side felt</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
@@ -373,6 +436,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>

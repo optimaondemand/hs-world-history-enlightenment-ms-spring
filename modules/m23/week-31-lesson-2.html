@@ -8,6 +8,31 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
 .canvas-frame { max-width: 1100px; margin: 0 auto; background: #ffffff; }
 @media print { body { background: #fff; } .canvas-frame { box-shadow: none; } }
 
+.optima-widget { background: linear-gradient(135deg, #E8F6FB 0%, #F4F9FC 100%); border: 1px solid #C5DCE5; border-left: 5px solid #2196D0; border-radius: 8px; padding: 18px 22px; margin: 18px 0; }
+.widget-kicker { font-size: 11px; color: #1B6A94; margin-bottom: 10px; letter-spacing: 0.4px; }
+.widget-question { font-size: 17px; color: #0E1C42; margin-bottom: 14px; line-height: 1.55; }
+.widget-row { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 6px; padding: 12px 14px; margin-bottom: 10px; }
+.widget-row-prompt { font-size: 15px; color: #0E1C42; margin-bottom: 8px; line-height: 1.5; font-style: italic; }
+.widget-options { display: flex; flex-wrap: wrap; gap: 8px; }
+.widget-options button { background: #FFFFFF; border: 1.5px solid #D0D9E8; border-radius: 8px; padding: 8px 14px; font-size: 14px; color: #0E1C42; cursor: pointer; transition: all 0.15s; font-family: inherit; }
+.widget-options button:hover { background: #F4F6FA; border-color: #55C8E8; }
+.widget-options button.selected { background: #0E1C42; color: #FFFFFF; border-color: #0E1C42; }
+.widget-options button.correct { background: #D8F0DD; border-color: #2A9D5C; color: #1A6B3D; }
+.widget-options button.incorrect { background: #FDECEC; border-color: #C0392B; color: #8A1F16; }
+.widget-feedback { background: #FFFFFF; border-left: 3px solid #C7922C; padding: 10px 14px; font-size: 15px; color: #1a2340; line-height: 1.55; margin: 10px 0; display: none; border-radius: 4px; }
+.widget-feedback.show { display: block; }
+.row-feedback { padding: 8px 12px; margin-top: 8px; font-size: 14px; border-radius: 4px; line-height: 1.5; }
+.row-feedback.correct { background: #D8F0DD; border-left: 3px solid #2A9D5C; color: #1A6B3D; }
+.row-feedback.incorrect { background: #FDECEC; border-left: 3px solid #C0392B; color: #8A1F16; }
+.widget-reset { background: transparent; border: 1px solid #C7922C; color: #C7922C; border-radius: 6px; padding: 6px 12px; font-size: 12px; cursor: pointer; font-family: inherit; margin-top: 6px; }
+.widget-reset:hover { background: #FDF3E3; }
+.ow-scale .widget-options { justify-content: space-between; }
+.ow-scale .widget-options button { flex: 1; text-align: center; }
+.ow-flip { background: #FFFFFF; border: 1px solid #D0D9E8; border-radius: 8px; padding: 18px 20px; cursor: pointer; text-align: center; }
+.ow-flip .ow-flip-back { display: none; color: #1a2340; }
+.ow-flip.flipped .ow-flip-front { display: none; }
+.ow-flip.flipped .ow-flip-back { display: block; }
+
 
 .gloss { border-bottom: 1px dotted #55C8E8; cursor: help; position: relative; }
 .gloss:hover .gloss-tip, .gloss:focus .gloss-tip { display: block; }
@@ -320,6 +345,18 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The trial opened on November 20, 1945. Twenty-four men were named in the <span class="gloss" tabindex="0"><strong>indictment</strong><button class="gloss-audio" onclick="speakGloss(event,'in-DYT-ment')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">in-DYT-ment</span>A formal written charge that says what crimes a person is accused of. <a class="om-maplink" href="#gloss-indictment">See the glossary box.</a></span></span>, and twenty-two stood in court. Hitler, Himmler, and Goebbels were already dead, so the highest man in the dock was Hermann G&ouml;ring. Four judges sat on the <span class="gloss" tabindex="0"><strong>tribunal</strong><button class="gloss-audio" onclick="speakGloss(event,'try-BYOO-nul')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">try-BYOO-nul</span>A court set up to hear a special kind of case. <a class="om-maplink" href="#gloss-tribunal">See the glossary box.</a></span></span>, one from each of the four powers, and each country had its prosecutors. The charges were four: a plot to wage war, crimes against peace, which meant starting an aggressive war, war crimes, and <span class="gloss" tabindex="0"><strong>crimes against humanity</strong><button class="gloss-audio" onclick="speakGloss(event,'KRYMZ uh-GENST hyoo-MAN-ih-tee')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">KRYMZ uh-GENST hyoo-MAN-ih-tee</span>Terrible acts, such as murder, enslavement, and persecution, done against civilians on a large scale. <a class="om-maplink" href="#gloss-crimes-against-humanity">See the glossary box.</a></span></span>.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">Jackson&rsquo;s opening speech on November 21 told the court why the trial mattered, and you will read part of it this week. Most of the proof came from the Nazis themselves, in thousands of captured documents. On November 29 the court watched films of the camps, shot by Allied soldiers. The defendants were allowed lawyers, and they could call witnesses and question those who testified against them. Most of them said that they had only followed orders. The tribunal rejected that defense, though it allowed it to be weighed when deciding the sentence.</p>
     </div>
+<div class="optima-widget ow-select" id="w31-2-a">
+        <div class="widget-kicker">WHY A TRIAL?</div>
+        <div class="widget-question">Use what you read about how the Allies decided to hold a trial.</div>
+        <div class="widget-row" data-correct="2" data-hint="Ask what a trial can do that a firing squad cannot.">
+            <div class="widget-row-prompt">Churchill at one time favored shooting top Nazi leaders without a trial, but Stimson argued for a real one. What reasons did Stimson's side give?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="The lesson gives other reasons. Look at what it says a trial would leave behind.">A trial would cost less than executions</button><button data-choice="1" data-fb="The Soviets wanted a show of guilt. The case for real evidence came from many Americans.">The Soviets had demanded a fair trial</button><button data-choice="2" data-fb="Right. The point was as much about the winners as about the accused.">A trial would leave a record of what had been done and show that the winners were bound by law</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Think about whose records they were.">
+            <div class="widget-row-prompt">Most of the proof at Nuremberg came from thousands of captured German documents. Why does that matter for the fairness of the trial?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. A court that relies on a man's own papers has a firmer base than one that relies on stories told after the war.">The charges rested on the Nazis' own records, and not only on the word of witnesses</button><button data-choice="1" data-fb="The lesson says they were allowed lawyers, and could call witnesses.">The defendants were given no lawyers</button><button data-choice="2" data-fb="The lesson says most of the proof came from the documents. It was evidence.">The judges needed no evidence at all</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE OBJECTIONS</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The defense made two serious objections. The first was that the charge of crimes against peace was an <span class="gloss" tabindex="0"><em>ex post facto</em><button class="gloss-audio" onclick="speakGloss(event,'EKS pohst FAK-toh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">EKS pohst FAK-toh</span>A Latin phrase meaning after the fact. An ex post facto law makes an act a crime after it was done. <a class="om-maplink" href="#gloss-ex-post-facto">See the glossary box.</a></span></span> law, a law made after the act. The old rule <span class="gloss" tabindex="0"><em>nullum crimen sine lege</em><button class="gloss-audio" onclick="speakGloss(event,'NUL-um KRIM-en SIN-ay LAY-gay')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">NUL-um KRIM-en SIN-ay LAY-gay</span>A Latin phrase meaning no crime without law. It names the rule that no one may be punished for an act that was not against the law when it was done. <a class="om-maplink" href="#gloss-nullum-crimen-sine-lege">See the glossary box.</a></span></span> says that no one may be punished for something that was not a crime when it was done. The tribunal answered that Germany had signed the Kellogg-Briand Pact of 1928, which gave up war as a way of settling quarrels, and that justice would be poorly served if the guilty went free on a technicality. Some American leaders, such as Senator Robert Taft, still thought the principle had been broken.</p>
@@ -337,15 +374,41 @@ body { margin: 0; padding: 0; font-family: "Segoe UI", Roboto, Helvetica, Arial,
         <div style="font-size:14px; color:#1a2340; line-height:1.5;">A Latin phrase meaning no crime without law. It names the rule that no one may be punished for an act that was not against the law when it was done.</div>
     </div>
     </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">AN OBJECTION THAT TROUBLES YOU</div>
+        <div class="widget-question">Which objection to the trial troubles you most?</div>
+        <div class="widget-options"><button data-response="This is the old rule nullum crimen sine lege. The tribunal answered that Germany had signed the Kellogg-Briand Pact of 1928. Senator Taft still thought the principle had been broken. Both views carry weight.">The charge was a law made after the act</button><button data-response="The Soviets had joined Hitler in attacking Poland, and the court did not accept their account of Katyn. The lesson grants that the tribunal was not perfect, and says it heard evidence and gave every man a defense.">It was victors' justice</button><button data-response="The tribunal rejected it, though it allowed it to be weighed when deciding the sentence. That leaves a question for you: how much should a duty to obey count against a duty to refuse?">Following orders was rejected as a defense</button><button data-response="Many held that view. The lesson says the guilty should not go free on a technicality, and it also says the objections were serious. Be ready to answer them.">None of them; the trial was right to go forward</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
+    </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE VERDICTS</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The verdicts came on October 1, 1946. Twelve men were sentenced to death, three to life in prison, and four to shorter terms, and three were found not guilty. G&ouml;ring took poison in his cell a few hours before he was to be hanged. The rest of the condemned were executed on October 16. Later American courts at Nuremberg tried doctors, judges, and business leaders. In Tokyo a similar tribunal tried Japan&rsquo;s leaders from 1946 to 1948, and seven men, among them Hideki Tojo, were hanged. In its judgment the Nuremberg tribunal said that crimes are committed by men and not by abstract entities, and that a person has duties that go beyond obedience to his own state. These trials set a principle that leaders can be held to account for crimes against peace and humanity, though many of the same questions about fairness came up there too.</p>
+    </div>
+<div class="optima-widget ow-select" id="w31-2-b">
+        <div class="widget-kicker">VERDICTS AND PRINCIPLES</div>
+        <div class="widget-question">Use what you read about the verdicts and the tribunal's judgment.</div>
+        <div class="widget-row" data-correct="1" data-hint="Look at the lesson's last sentences about what the tribunal said.">
+            <div class="widget-row-prompt">The tribunal said that crimes are committed by men and not by abstract entities. What does that mean for a leader who says the state ordered it?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="That is the view the tribunal rejected.">The state alone is to blame, so no man can be tried</button><button data-choice="1" data-fb="Right. This is the principle the trials set: leaders can be held to account.">A person has duties beyond obedience to his own state, and can be held to account</button><button data-choice="2" data-fb="The tribunal tried twenty-two men, and later courts tried doctors, judges, and business leaders.">Only the highest leader can be tried</button></div>
+        </div><div class="widget-row" data-correct="0" data-hint="Ask what a fixed trial would look like in its results.">
+            <div class="widget-row-prompt">Three defendants were found not guilty. What does that suggest about the trial?</div>
+            <div class="widget-options"><button data-choice="0" data-fb="Right. It does not prove the trial was perfect, but it answers the claim that the result was fixed.">The court weighed each man's case and did not simply convict everyone</button><button data-choice="1" data-fb="The lesson says most of the proof came from captured documents.">The Allies had no evidence at all</button><button data-choice="2" data-fb="A fixed trial would not free anyone. The verdicts differed from man to man.">The trial was a show with the outcome fixed</button></div>
+        </div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #C7922C; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">THE UNITED NATIONS</div>
         <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The second hope was an organization to keep the peace. You have read how the League of Nations failed, partly because the American Senate refused to join. Roosevelt had planned a new body during the war, and in April 1945 delegates from fifty nations met in San Francisco to write its <span class="gloss" tabindex="0"><strong>charter</strong><button class="gloss-audio" onclick="speakGloss(event,'CHAR-ter')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">CHAR-ter</span>A written document that creates an organization and sets out its purposes and rules. <a class="om-maplink" href="#gloss-charter">See the glossary box.</a></span></span>. It was signed on June 26. The Senate approved it on July 28 by a vote of 89 to 2, and it took effect on October 24, 1945.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">All members sit in a General Assembly, but the real power lies in the Security Council. It has five permanent members, the United States, Britain, France, the Soviet Union, and China, and each holds a <span class="gloss" tabindex="0"><strong>veto</strong><button class="gloss-audio" onclick="speakGloss(event,'VEE-toh')" aria-label="Play pronunciation">&#128266;</button><span class="gloss-tip"><span class="gloss-pron">VEE-toh</span>The power to block a decision by saying no. <a class="om-maplink" href="#gloss-veto">See the glossary box.</a></span></span>. Any one of them can block action. This was a price paid for the great powers&rsquo; membership, because they would not join otherwise. But it meant that the United Nations could not act against any of them. The founders were realistic about this, since they knew that peace could not be kept by a body that the strongest states would not obey.</p>
 <p style="font-size:17px; color:#1a2340; line-height:1.7; margin:0 0 14px 0;">The Assembly also created agencies for food, health, and refugees, and in 1948 it adopted a Universal Declaration of Human Rights, though the declaration had no power to enforce itself. Look back at the two efforts of this lesson. Each tried to bind the strong to a rule of law, and each depended on the strong agreeing to be bound. As you read Jackson&rsquo;s words this week, ask whether law that rests on the consent of the powerful is a weakness or a beginning.</p>
+    </div>
+<div class="optima-widget ow-reflect">
+        <div class="widget-kicker">LAW AND THE STRONG</div>
+        <div class="widget-question">Both efforts depended on the strong agreeing to be bound. Which is the better description of that?</div>
+        <div class="widget-options"><button data-response="The veto shows this. Any of the five permanent members can block action, so the United Nations could not act against any of them. The founders knew it.">A weakness, because it fails when the powerful refuse</button><button data-response="The lesson says the trials set a principle that leaders can be held to account, though questions of fairness came up there too. A beginning is not a finished work.">A beginning, because a principle can outlive a failure</button><button data-response="The lesson says the veto was a price paid, because the great powers would not join otherwise. The lesson leaves the weighing to you.">Both, the price of getting the great powers to join</button><button data-response="The founders partly agreed. They knew that peace could not be kept by a body that the strongest states would not obey. The question is whether law and force can work together.">Neither; law means little without force behind it</button></div>
+        <div class="widget-feedback"></div>
+        <button class="widget-reset">Reset</button>
     </div>
 <div style="background: #FFFFFF; border-top: 3px solid #55C8E8; border: 1px solid #D0D9E8; border-radius: 8px; padding: 20px 24px; margin-bottom: 20px;">
         <div style="font-size: 11px; color: #C7922C; margin-bottom: 14px;">&#128279; THIS WEEK'S ASSESSMENT</div>
@@ -384,6 +447,45 @@ function omShowFeature(evt, mapId, featId) {
   }
 }
 
+
+(function () {
+  document.addEventListener('click', function (e) {
+    var reset = e.target.closest('.widget-reset');
+    if (reset) {
+      var w = reset.closest('.optima-widget');
+      w.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      w.querySelectorAll('.widget-feedback').forEach(function (f) { f.classList.remove('show'); f.textContent = ''; });
+      w.querySelectorAll('.row-feedback').forEach(function (f) { f.remove(); });
+      w.querySelectorAll('.ow-flip.flipped').forEach(function (c) { c.classList.remove('flipped'); });
+      return;
+    }
+    var rBtn = e.target.closest('.ow-reflect .widget-options button');
+    if (rBtn) {
+      var rw = rBtn.closest('.optima-widget');
+      rw.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected'); });
+      rBtn.classList.add('selected');
+      var fb = rw.querySelector('.widget-feedback');
+      fb.textContent = rBtn.dataset.response || '';
+      fb.classList.add('show');
+      return;
+    }
+    var sBtn = e.target.closest('.ow-select .widget-row .widget-options button, .ow-scale .widget-row .widget-options button');
+    if (sBtn) {
+      var row = sBtn.closest('.widget-row');
+      var correct = row.dataset.correct;
+      row.querySelectorAll('.widget-options button').forEach(function (b) { b.classList.remove('selected', 'correct', 'incorrect'); });
+      var right = sBtn.dataset.choice === correct;
+      sBtn.classList.add(right ? 'correct' : 'incorrect');
+      var text = right ? (sBtn.dataset.fb || row.dataset.fb || 'Right.') : (sBtn.dataset.fb || row.dataset.hint || 'Not quite. Try again.');
+      var rf = row.querySelector('.row-feedback') || row.appendChild(document.createElement('div'));
+      rf.className = 'row-feedback ' + (right ? 'correct' : 'incorrect');
+      rf.textContent = text;
+      return;
+    }
+    var flip = e.target.closest('.ow-flip');
+    if (flip) { flip.classList.toggle('flipped'); return; }
+  });
+})();
 
 </script>
 </body>
